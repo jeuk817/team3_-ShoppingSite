@@ -20,7 +20,9 @@ public class SignUpService implements Action {
 		String name = request.getParameter("name");
 		String hp = request.getParameter("hp");
 		String address = request.getParameter("address");
-		String cardNum = request.getParameter("card");
+		String cardNum = request.getParameter("card_num");
+		
+		System.out.println(pwd);
 		
 		DTOMember member = new DTOMember(id, pwd, name, hp, cardNum, address);
 		int resultRow = DAOMember.insertMember(member); // 어떻게 처리할지 생각해보자

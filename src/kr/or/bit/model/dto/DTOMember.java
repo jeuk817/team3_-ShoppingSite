@@ -74,5 +74,11 @@ public class DTOMember {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+	@Override
+	public String toString() {
+		return "DTOMember [id=" + id + ", pwd=" + pwd + ", name=" + name + ", hp=" + hp + ", cardNum=" + cardNum
+				+ ", address=" + address + "]";
+	}
 	
 }
