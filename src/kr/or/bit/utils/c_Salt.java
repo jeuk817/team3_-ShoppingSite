@@ -31,7 +31,7 @@ public class c_Salt {
 	/*
 	private void makeFile(String id) {
 		try {
-			FileWriter fr = new FileWriter("C:\\Users\\user\\key\\"+id+".key.txt");
+			FileWriter fr = new FileWriter(path);
 			double d = Math.random();
 			String comp = "오늘도 즐거운 코딩"+d+"^^!";
 			fr.write(comp);
@@ -63,8 +63,7 @@ public class c_Salt {
 			bis = new BufferedInputStream(fis);
 			byte[] b = new byte[(byte)(f.length())];
 			bis.read(b);
-			str = new String(b);
-			System.out.println(b);
+			str = new String(b);		
 			return str;
 		} catch (Exception e) {
 			// TODO: handle exception

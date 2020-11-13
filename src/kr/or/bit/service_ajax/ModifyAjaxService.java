@@ -26,7 +26,7 @@ public class ModifyAjaxService implements ActionAjax {
 		String address = jsonBody.get("address").getAsString();
 		String id = (String)request.getAttribute("memberId");
 		DTOMember member = new DTOMember(id, pwd, hp, cardNum, address);
-		int resultRow = DAOMember.updateMember(member);
+		int resultRow = DAOMember.c_updateMember(member);
 		
 		if(resultRow == 1) ajaxData.setData("success");
 		else ajaxData.setData("fail");

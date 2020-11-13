@@ -12,6 +12,8 @@ body{
 <title>Error 401 Unauthorized</title>
 </head>
 <body>
+<h1>Error 401 Unauthorized</h1>
+	<h3>^__^</h3><br>
 
 </body>
 </html>

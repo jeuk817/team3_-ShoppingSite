@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import kr.or.bit.action.ActionAjax;
 import kr.or.bit.action.ActionAjaxData;
 import kr.or.bit.service_ajax.*;
+import kr.or.kosta.Action.BoardReplyAction;
 
 
 @WebServlet(
@@ -38,12 +39,10 @@ public class AjaxController extends HttpServlet {
 		actionList.put("/idCheck.ajax", new IdCheckAjaxService());
 		actionList.put("/signIn.ajax", new SignInAjaxService());
 		actionList.put("/purchase.ajax", new PurchaseAjaxService());
-		actionList.put("/editMember.ajax", new EditMemberAjaxService());
-<<<<<<< HEAD
+		actionList.put("/editMember.ajax", new c_EditMemberAjaxService());
 		actionList.put("/confirmPwd.ajax", new c_ConfirmPwdService());
-=======
-		actionList.put("/confirmPwd.ajax", new ConfirmPwdService());
->>>>>>> f6fa83a0eea4f294321c96fd8368998a4f885e8f
+		actionList.put("/inqAnswer.ajax" , new c_Add_inquiry_Answer());
+
 		
 		System.out.println(" initialized");
 	}
