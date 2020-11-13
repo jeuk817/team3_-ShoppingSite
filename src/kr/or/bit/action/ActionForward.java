@@ -12,7 +12,7 @@ public class ActionForward {
 		this.isRedirect = isRedirect;
 	}
 	public String getPath() {
-		return prePath + path;
+		return isRedirect ? path : prePath + path;
 	}
 	public void setPath(String path) {
 		this.path = path;
