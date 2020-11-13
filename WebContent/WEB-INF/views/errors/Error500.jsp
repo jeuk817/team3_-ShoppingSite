@@ -14,6 +14,6 @@ body{
 <body>
 <h1>500 Server Error</h1><hr>
 <h3>
-Description : Internal Server Error </h3> 
+Description : Internal Server Error. It is not my fault.</h3> 
 </body>
 </html>

@@ -10,14 +10,10 @@ import java.sql.SQLException;
 
 import kr.or.bit.model.DBManager;
 import kr.or.bit.model.dto.DTOMember;
-<<<<<<< HEAD
 import kr.or.bit.utils.c_AES256Util;
 import kr.or.bit.utils.c_SHAUtil;
 import kr.or.bit.utils.c_Salt;
-=======
-import kr.or.bit.service.Salt;
-import kr.or.bit.utils.SHAUtil;
->>>>>>> f6fa83a0eea4f294321c96fd8368998a4f885e8f
+
 
 public class DAOMember {
 	private static DBManager instance = DBManager.getInstance();
@@ -56,17 +52,11 @@ public class DAOMember {
 	 * @param member
 	 * @return
 	 */
-<<<<<<< HEAD
-	public static int c_insertMember(DTOMember member) {
-	
+
+	public static int c_insertMember(DTOMember member) {	
 		c_SHAUtil sha = new c_SHAUtil();
 		c_Salt salt = new c_Salt();		
-=======
-	public static int insertMember(DTOMember member) {
-		SHAUtil sha = new SHAUtil();
-		Salt salt = new Salt();
-	
->>>>>>> f6fa83a0eea4f294321c96fd8368998a4f885e8f
+
 		
 		int resultRow = 0;
 		Connection conn = null;
@@ -75,24 +65,16 @@ public class DAOMember {
 			conn = instance.getConnection();
 			pstmt = conn.prepareStatement(SQL_INSERT_MEMBER);
 			pstmt.setString(1, member.getId());
-			
-<<<<<<< HEAD
 			String s =salt.readSalt("key.txt");
 			System.out.println("소금추가:"+s);
-=======
-			String s =salt.readSalt();
-			System.out.println("s:"+s);
->>>>>>> f6fa83a0eea4f294321c96fd8368998a4f885e8f
+
 			pstmt.setString(2, sha.getSha512(s+member.getPwd()));
 			pstmt.setString(3, member.getName());
 			pstmt.setString(4, member.getHp());
 			pstmt.setString(5, member.getCardNum());
 			pstmt.setString(6, member.getAddress());
-<<<<<<< HEAD
 			System.out.println(member.toString());		
-=======
-			System.out.println(member.toString());
->>>>>>> f6fa83a0eea4f294321c96fd8368998a4f885e8f
+
 			System.out.println("1:"+sha.getSha512(member.getPwd()));
 			System.out.println("2:"+sha.getSha512(s+member.getPwd()));
 			resultRow = pstmt.executeUpdate();
@@ -106,15 +88,11 @@ public class DAOMember {
 		return resultRow;
 	}
 	
-<<<<<<< HEAD
+
 	public static int c_updateMember(DTOMember member) {
 		c_SHAUtil sha = new c_SHAUtil();
 		c_Salt salt = new c_Salt();
-=======
-	public static int updateMember(DTOMember member) {
-		SHAUtil sha = new SHAUtil();
-		Salt salt = new Salt();
->>>>>>> f6fa83a0eea4f294321c96fd8368998a4f885e8f
+
 		
 		int resultRow = 0;
 		Connection conn = null;
@@ -122,11 +100,7 @@ public class DAOMember {
 		try {
 			conn = instance.getConnection();
 			pstmt = conn.prepareStatement(SQL_UPDATE_MEMBER);
-<<<<<<< HEAD
 			String s =salt.readSalt("key.txt");
-=======
-			String s =salt.readSalt();
->>>>>>> f6fa83a0eea4f294321c96fd8368998a4f885e8f
 			pstmt.setString(1, sha.getSha512(s+member.getPwd()));
 			pstmt.setString(2, member.getHp());
 			pstmt.setString(3, member.getCardNum());

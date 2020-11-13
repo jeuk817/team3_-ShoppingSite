@@ -9,10 +9,6 @@
 </head>
 <body>
 	<form action="signUp.do">
-<<<<<<< HEAD
-	
-=======
->>>>>>> f6fa83a0eea4f294321c96fd8368998a4f885e8f
 		userID<input type="text" id="id" name="id"><br>
 		P  W  D<input type="password" id="pwd" name="pwd"><br>
 		N A M E<input type="text" id="name" name="name"><br>
@@ -20,21 +16,19 @@
 		ADDRESS<input type="text" id="address" name="address"><br>
 		C A R D<input type="text" id="card_num" name="card_num"><br>
 		<p><input type="submit"></p>
-	</form>
-	
+	</form>	
 	<form id="SignIn" name="SignIn" action="signIn.ajax" method="POST">
 			ID<input type="text" id="id" name="id"><br>
 		PWD<input type="password" id="pwd" name="pwd"><br>
 		<input type="submit" id="SignIn">
 	</form>
-<<<<<<< HEAD
+
 <div id="message" >status</div>
-=======
-<div id="message"></div>
->>>>>>> f6fa83a0eea4f294321c96fd8368998a4f885e8f
+
 index
 <input type="button" id="sendAjax" value="send ajax">
 </body>
+<!-- 
  <script type="text/javascript">
  fetch("SignIn.do",{
 		method : "POST",
@@ -49,8 +43,10 @@ index
 	 	localStorage.setItem('access-token', res.access_token);
 	})
   </script>
+   -->
 <script>
-/*null오류 너무뜸
+
+
 $(document).ready(function() {
 	$("#SignIn").click(function() {
 		var action = $("#SignIn").attr('action');
@@ -77,7 +73,7 @@ $(document).ready(function() {
 		return false;
 	});
 });
-*/
+
 </script>
 <script>
 /*null오류 너무뜸

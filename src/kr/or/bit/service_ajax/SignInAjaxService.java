@@ -10,27 +10,19 @@ import kr.or.bit.action.ActionAjax;
 import kr.or.bit.action.ActionAjaxData;
 import kr.or.bit.model.dao.DAOMember;
 import kr.or.bit.model.dto.DTOMember;
-<<<<<<< HEAD
 import kr.or.bit.utils.c_Salt;
 import kr.or.bit.utils.c_SHAUtil;
-=======
-import kr.or.bit.service.Salt;
-import kr.or.bit.utils.SHAUtil;
->>>>>>> f6fa83a0eea4f294321c96fd8368998a4f885e8f
+
 
 public class SignInAjaxService implements ActionAjax {
 
 	@Override
 	public ActionAjaxData execute(HttpServletRequest request, HttpServletResponse response) {
-<<<<<<< HEAD
+
 		c_SHAUtil sha =new c_SHAUtil();
 		c_Salt salt = new c_Salt();
 		String s = salt.readSalt("key.txt");
-=======
-		SHAUtil sha =new SHAUtil();
-		Salt salt = new Salt();
-		String s = salt.readSalt();
->>>>>>> f6fa83a0eea4f294321c96fd8368998a4f885e8f
+
 		
 		ActionAjaxData ajaxData = new ActionAjaxData();
 		
