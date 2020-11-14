@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="team3_ShoppingSite:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:team3" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f703cae6-fc67-4bec-976d-52de747e20f0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/WebContent/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/Web/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/META-INF/context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/js/categoryJs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/js/categoryJs.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/js/signInJs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/js/signInJs.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/js/signUpJs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/js/signUpJs.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/Cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/Cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/Category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/Category.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/Main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/Main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/MyPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/MyPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/Purchased.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/Purchased.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/Sale.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/Sale.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/SaleList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/SaleList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/Seller.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/Seller.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/SignIn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/SignIn.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/SignUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/SignUp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/WriteSale.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/WriteSale.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/common/Top.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/common/Top.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/errors/Error400.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/errors/Error400.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/errors/Error401.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/errors/Error401.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/errors/Error403.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/errors/Error403.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/errors/Error404.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/errors/Error404.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/views/errors/Error500.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/views/errors/Error500.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/brand/bootstrap-outline.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/brand/bootstrap-outline.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/brand/bootstrap-solid.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/brand/bootstrap-solid.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/js/bootstrap.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/assets/dist/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Web/assets/dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/css/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/css/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/css/SiginIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/css/SiginIn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/css/SignUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web/css/SignUp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/+detail_01 (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/+detail_01 (1).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/+detail_01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/+detail_01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/19309420_1598777941_image1_M.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/19309420_1598777941_image1_M.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/400.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/400.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/401.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/401.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/403.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/403.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/404.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/404.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/500.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/500.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/bannerImage_199507_1602477265.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/bannerImage_199507_1602477265.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/img_mountains_wide.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/img_mountains_wide.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/img_nature_wide.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/img_nature_wide.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/img_snow_wide.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/img_snow_wide.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/jacket.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/jacket.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/logo@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/logo@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/다운로드 (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/다운로드 (1).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/다운로드 (2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/다운로드 (2).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/images/다운로드.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Web/images/다운로드.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kr/or/bit/controller/AjaxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kr/or/bit/controller/AjaxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kr/or/bit/controller/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kr/or/bit/controller/FrontController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kr/or/bit/service_ajax/WriteSaleAjaxService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kr/or/bit/service_ajax/WriteSaleAjaxService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1kDTc459XJ7h6Qk8qpoo9z9ETXR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="kr.or.bit.service_ajax" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Web" />
+      <recent name="$PROJECT_DIR$/web" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.38" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.38" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="team3_ShoppingSite:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_team3_ShoppingSite_5" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51420" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f703cae6-fc67-4bec-976d-52de747e20f0" name="Default Changelist" comment="" />
+      <created>1605234243388</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605234243388</updated>
+      <workItem from="1605234245249" duration="580000" />
+      <workItem from="1605236375293" duration="1346000" />
+      <workItem from="1605248321156" duration="6104000" />
+      <workItem from="1605255223642" duration="3386000" />
+      <workItem from="1605320009759" duration="750000" />
+      <workItem from="1605321274428" duration="305000" />
+      <workItem from="1605321591362" duration="10640000" />
+      <workItem from="1605341840625" duration="2403000" />
+      <workItem from="1605344253377" duration="1149000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="410" y="151" key="#Project_Structure" timestamp="1605322713922">
+      <screen x="52" y="25" width="1740" height="1095" />
+    </state>
+    <state x="410" y="151" key="#Project_Structure/52.25.1740.1095@52.25.1740.1095" timestamp="1605322713922" />
+    <state x="384" y="213" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605234410305">
+      <screen x="46" y="23" width="1746" height="1097" />
+    </state>
+    <state x="384" y="213" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/46.23.1746.1097@46.23.1746.1097" timestamp="1605234410305" />
+    <state x="152" y="369" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605332566824">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="152" y="369" key="#com.intellij.fileTypes.FileTypeChooser/-1325.25.1325.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332566824" />
+    <state x="703" y="280" key="#com.intellij.ide.util.MemberChooser" timestamp="1605333654982">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="703" y="280" key="#com.intellij.ide.util.MemberChooser/-1325.25.1325.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605333654982" />
+    <state x="735" y="280" key="#com.intellij.ide.util.MemberChooser/1792.25.1920.1055/52.25.1740.1095@52.25.1740.1095" timestamp="1605255865752" />
+    <state x="541" y="210" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1605322730513">
+      <screen x="52" y="25" width="1740" height="1095" />
+    </state>
+    <state x="537" y="208" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/46.23.1746.1097@46.23.1746.1097" timestamp="1605234379685" />
+    <state x="541" y="210" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/52.25.1740.1095@52.25.1740.1095" timestamp="1605322730513" />
+    <state x="845" y="311" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1605332246586">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="845" y="311" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332246586" />
+    <state width="606" height="289" key="GridCell.Tab.0.bottom" timestamp="1605341835103">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.0.bottom/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262238" />
+    <state width="606" height="289" key="GridCell.Tab.0.bottom/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627823" />
+    <state width="606" height="289" key="GridCell.Tab.0.bottom/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835103" />
+    <state width="590" height="292" key="GridCell.Tab.0.bottom/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203149" />
+    <state width="590" height="292" key="GridCell.Tab.0.bottom/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481638" />
+    <state width="1197" height="289" key="GridCell.Tab.0.bottom/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678392" />
+    <state width="606" height="289" key="GridCell.Tab.0.center" timestamp="1605341835102">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.0.center/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262237" />
+    <state width="606" height="289" key="GridCell.Tab.0.center/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627821" />
+    <state width="606" height="289" key="GridCell.Tab.0.center/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835102" />
+    <state width="590" height="292" key="GridCell.Tab.0.center/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203148" />
+    <state width="590" height="292" key="GridCell.Tab.0.center/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481636" />
+    <state width="1197" height="289" key="GridCell.Tab.0.center/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678391" />
+    <state width="606" height="289" key="GridCell.Tab.0.left" timestamp="1605341835101">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.0.left/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262230" />
+    <state width="606" height="289" key="GridCell.Tab.0.left/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627820" />
+    <state width="606" height="289" key="GridCell.Tab.0.left/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835101" />
+    <state width="590" height="292" key="GridCell.Tab.0.left/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203148" />
+    <state width="590" height="292" key="GridCell.Tab.0.left/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481635" />
+    <state width="1197" height="289" key="GridCell.Tab.0.left/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678389" />
+    <state width="606" height="289" key="GridCell.Tab.0.right" timestamp="1605341835102">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.0.right/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262238" />
+    <state width="606" height="289" key="GridCell.Tab.0.right/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627822" />
+    <state width="606" height="289" key="GridCell.Tab.0.right/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835102" />
+    <state width="590" height="292" key="GridCell.Tab.0.right/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203149" />
+    <state width="590" height="292" key="GridCell.Tab.0.right/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481637" />
+    <state width="1197" height="289" key="GridCell.Tab.0.right/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678391" />
+    <state width="606" height="289" key="GridCell.Tab.1.bottom" timestamp="1605341835104">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.1.bottom/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262240" />
+    <state width="606" height="289" key="GridCell.Tab.1.bottom/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627825" />
+    <state width="606" height="289" key="GridCell.Tab.1.bottom/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835104" />
+    <state width="590" height="292" key="GridCell.Tab.1.bottom/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203150" />
+    <state width="590" height="292" key="GridCell.Tab.1.bottom/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481639" />
+    <state width="1197" height="289" key="GridCell.Tab.1.bottom/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678393" />
+    <state width="606" height="289" key="GridCell.Tab.1.center" timestamp="1605341835104">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.1.center/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262239" />
+    <state width="606" height="289" key="GridCell.Tab.1.center/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627824" />
+    <state width="606" height="289" key="GridCell.Tab.1.center/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835104" />
+    <state width="590" height="292" key="GridCell.Tab.1.center/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203150" />
+    <state width="590" height="292" key="GridCell.Tab.1.center/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481639" />
+    <state width="1197" height="289" key="GridCell.Tab.1.center/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678393" />
+    <state width="606" height="289" key="GridCell.Tab.1.left" timestamp="1605341835104">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.1.left/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262238" />
+    <state width="606" height="289" key="GridCell.Tab.1.left/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627824" />
+    <state width="606" height="289" key="GridCell.Tab.1.left/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835103" />
+    <state width="590" height="292" key="GridCell.Tab.1.left/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203149" />
+    <state width="590" height="292" key="GridCell.Tab.1.left/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481638" />
+    <state width="1197" height="289" key="GridCell.Tab.1.left/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678392" />
+    <state width="606" height="289" key="GridCell.Tab.1.right" timestamp="1605341835104">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.1.right/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262240" />
+    <state width="606" height="289" key="GridCell.Tab.1.right/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627824" />
+    <state width="606" height="289" key="GridCell.Tab.1.right/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835104" />
+    <state width="590" height="292" key="GridCell.Tab.1.right/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203150" />
+    <state width="590" height="292" key="GridCell.Tab.1.right/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481639" />
+    <state width="1197" height="289" key="GridCell.Tab.1.right/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678393" />
+    <state width="606" height="289" key="GridCell.Tab.2.bottom" timestamp="1605341835106">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.2.bottom/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262158" />
+    <state width="606" height="289" key="GridCell.Tab.2.bottom/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627827" />
+    <state width="606" height="289" key="GridCell.Tab.2.bottom/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835106" />
+    <state width="590" height="292" key="GridCell.Tab.2.bottom/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203151" />
+    <state width="590" height="292" key="GridCell.Tab.2.bottom/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481558" />
+    <state width="1197" height="289" key="GridCell.Tab.2.bottom/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678252" />
+    <state width="606" height="289" key="GridCell.Tab.2.center" timestamp="1605341835105">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.2.center/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262157" />
+    <state width="606" height="289" key="GridCell.Tab.2.center/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627825" />
+    <state width="606" height="289" key="GridCell.Tab.2.center/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835105" />
+    <state width="590" height="292" key="GridCell.Tab.2.center/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203151" />
+    <state width="590" height="292" key="GridCell.Tab.2.center/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481558" />
+    <state width="1197" height="289" key="GridCell.Tab.2.center/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678251" />
+    <state width="606" height="289" key="GridCell.Tab.2.left" timestamp="1605341835105">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.2.left/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262156" />
+    <state width="606" height="289" key="GridCell.Tab.2.left/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627825" />
+    <state width="606" height="289" key="GridCell.Tab.2.left/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835105" />
+    <state width="590" height="292" key="GridCell.Tab.2.left/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203150" />
+    <state width="590" height="292" key="GridCell.Tab.2.left/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481558" />
+    <state width="1197" height="289" key="GridCell.Tab.2.left/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678251" />
+    <state width="606" height="289" key="GridCell.Tab.2.right" timestamp="1605341835105">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.2.right/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262157" />
+    <state width="606" height="289" key="GridCell.Tab.2.right/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627826" />
+    <state width="606" height="289" key="GridCell.Tab.2.right/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835105" />
+    <state width="590" height="292" key="GridCell.Tab.2.right/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203151" />
+    <state width="590" height="292" key="GridCell.Tab.2.right/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481558" />
+    <state width="1197" height="289" key="GridCell.Tab.2.right/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678252" />
+    <state width="606" height="289" key="GridCell.Tab.3.bottom" timestamp="1605341835107">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.3.bottom/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262159" />
+    <state width="606" height="289" key="GridCell.Tab.3.bottom/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627829" />
+    <state width="606" height="289" key="GridCell.Tab.3.bottom/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835107" />
+    <state width="590" height="292" key="GridCell.Tab.3.bottom/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203152" />
+    <state width="590" height="292" key="GridCell.Tab.3.bottom/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481560" />
+    <state width="1197" height="289" key="GridCell.Tab.3.bottom/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678254" />
+    <state width="606" height="289" key="GridCell.Tab.3.center" timestamp="1605341835106">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.3.center/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262158" />
+    <state width="606" height="289" key="GridCell.Tab.3.center/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627828" />
+    <state width="606" height="289" key="GridCell.Tab.3.center/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835106" />
+    <state width="590" height="292" key="GridCell.Tab.3.center/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203152" />
+    <state width="590" height="292" key="GridCell.Tab.3.center/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481559" />
+    <state width="1197" height="289" key="GridCell.Tab.3.center/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678253" />
+    <state width="606" height="289" key="GridCell.Tab.3.left" timestamp="1605341835106">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.3.left/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262158" />
+    <state width="606" height="289" key="GridCell.Tab.3.left/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627827" />
+    <state width="606" height="289" key="GridCell.Tab.3.left/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835106" />
+    <state width="590" height="292" key="GridCell.Tab.3.left/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203151" />
+    <state width="590" height="292" key="GridCell.Tab.3.left/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481559" />
+    <state width="1197" height="289" key="GridCell.Tab.3.left/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678253" />
+    <state width="606" height="289" key="GridCell.Tab.3.right" timestamp="1605341835106">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state width="606" height="289" key="GridCell.Tab.3.right/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332262159" />
+    <state width="606" height="289" key="GridCell.Tab.3.right/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340627828" />
+    <state width="606" height="289" key="GridCell.Tab.3.right/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341835106" />
+    <state width="590" height="292" key="GridCell.Tab.3.right/1792.23.1920.1057/46.23.1746.1097@1792.23.1920.1057" timestamp="1605245203152" />
+    <state width="590" height="292" key="GridCell.Tab.3.right/1792.23.1920.1057/46.23.1746.1097@46.23.1746.1097" timestamp="1605236481559" />
+    <state width="1197" height="289" key="GridCell.Tab.3.right/52.25.1740.1095@52.25.1740.1095" timestamp="1605322678253" />
+    <state x="36" y="311" key="IDE.errors.dialog" timestamp="1605341573842">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="36" y="311" key="IDE.errors.dialog/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332226640" />
+    <state x="36" y="311" key="IDE.errors.dialog/-1327.25.1327.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605341573842" />
+    <state x="549" y="25" key="SettingsEditor" timestamp="1605332249167">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="549" y="25" key="SettingsEditor/-1323.25.1323.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605332249167" />
+    <state x="2189" y="131" key="SettingsEditor/1792.25.1920.1055/52.25.1740.1095@1792.25.1920.1055" timestamp="1605248353659" />
+    <state x="52" y="25" key="SettingsEditor/1792.25.1920.1055/52.25.1740.1095@52.25.1740.1095" timestamp="1605255052817" />
+    <state x="407" y="133" key="SettingsEditor/46.23.1746.1097@46.23.1746.1097" timestamp="1605234372311" />
+    <state x="585" y="25" key="SettingsEditor/52.25.1740.1095@52.25.1740.1095" timestamp="1605322752074" />
+    <state x="779" y="339" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1605322076306">
+      <screen x="52" y="25" width="1740" height="1095" />
+    </state>
+    <state x="779" y="339" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/52.25.1740.1095@52.25.1740.1095" timestamp="1605322076306" />
+    <state x="914" y="675" width="896" height="1095" key="dock-window-1" timestamp="1605333431413">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="914" y="675" width="896" height="1095" key="dock-window-1/-1325.25.1325.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605333431413" />
+    <state x="259" y="658" width="896" height="1095" key="dock-window-2" timestamp="1605334124989">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="259" y="658" width="896" height="1095" key="dock-window-2/-1325.25.1325.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605334124989" />
+    <state x="856" y="25" width="682" height="780" key="dock-window-3" timestamp="1605334124990">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="856" y="25" width="682" height="780" key="dock-window-3/-1325.25.1325.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605334124990" />
+    <state x="895" y="25" width="896" height="1095" key="dock-window-4" timestamp="1605340062598">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="896" y="25" width="896" height="1095" key="dock-window-4/-1325.25.1325.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605335747611" />
+    <state x="895" y="25" width="896" height="1095" key="dock-window-4/-1329.25.1329.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340062598" />
+    <state x="894" y="25" width="896" height="1095" key="dock-window-5" timestamp="1605340791605">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="894" y="25" width="896" height="1095" key="dock-window-5/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605340791605" />
+    <state x="896" y="25" width="896" height="1095" key="dock-window-6" timestamp="1605344603567">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="896" y="25" width="896" height="1095" key="dock-window-6/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605344603567" />
+    <state x="113" y="265" key="run.anything.popup" timestamp="1605344172335">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="113" y="265" key="run.anything.popup/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605344172335" />
+    <state x="109" y="269" width="670" height="676" key="search.everywhere.popup" timestamp="1605345092973">
+      <screen x="0" y="25" width="1792" height="1095" />
+    </state>
+    <state x="109" y="269" width="670" height="676" key="search.everywhere.popup/-1326.25.1326.743/0.25.1792.1095@0.25.1792.1095" timestamp="1605345092973" />
+  </component>
+</project>

@@ -1,7 +1,6 @@
 package kr.or.bit.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
@@ -49,6 +48,7 @@ public class FrontController extends HttpServlet {
 		actionList.put("/seller/sellerPage.do", new SellerPageService());
 		actionList.put("/seller/saleListPage.do", new SaleListPageService());
 		actionList.put("/seller/writeSalePage.do", new WriteSalePageService());
+		actionList.put("/member/editInquPage.do", new EditInquiryPageService());
 		
 		System.out.println(" initialized");
 	}
