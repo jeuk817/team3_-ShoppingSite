@@ -14,5 +14,6 @@ body{
 <body>
 <h1>404 Not Found</h1><hr>
 <h3>But you can see this cute cat.</h3>
+<a href="main.do">main</a>
 </body>
 </html>
