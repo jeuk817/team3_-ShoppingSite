@@ -19,6 +19,7 @@
 	<c:choose>
 			<c:when test="${id == null}">
 				<div>
+				<h1>로그인 후 이용 가능<h1>
 					<form action="SignIn.do" method="post">
 						<button type="button">SignIn</button>						
 					</form>
