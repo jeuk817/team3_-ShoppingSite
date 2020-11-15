@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <style type="text/css">
 body{
-	background-image: url("../../../images/500.png");
+	background-image: url("https://192.168.0.30:8443/team3_ShoppingSite/images/500.PNG");
 }
 </style>
 <title>Error 500 Server Error</title>

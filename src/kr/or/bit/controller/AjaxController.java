@@ -13,8 +13,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.or.bit.action.ActionAjax;
 import kr.or.bit.action.ActionAjaxData;
-import kr.or.bit.service_ajax.*;
-import kr.or.kosta.Action.BoardReplyAction;
+import kr.or.bit.service.c_Add_inquiry_Answer;
+
+import kr.or.bit.service_ajax.IdCheckAjaxService;
+import kr.or.bit.service_ajax.PurchaseAjaxService;
+import kr.or.bit.service_ajax.SignInAjaxService;
+import kr.or.bit.service_ajax.c_ConfirmPwdService;
+import kr.or.bit.service_ajax.c_EditMemberAjaxService;
+
 
 
 @WebServlet(

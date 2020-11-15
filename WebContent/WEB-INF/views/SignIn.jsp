@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<<<<<<< HEAD
+
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-=======
->>>>>>> f6fa83a0eea4f294321c96fd8368998a4f885e8f
+
 <title>Insert title here</title>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -39,6 +38,7 @@ $(document).ready(function() {
 </head>
 
 <body>
+
 	<form id="form1" name="form1" action="login_ok.php" method="post">
 		<table>
 			<tr>

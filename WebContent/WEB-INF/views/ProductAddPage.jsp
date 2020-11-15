@@ -36,28 +36,18 @@
 						<h2>상품크기</h2><input type="text" name="pSize"><br>
 						<h2>상품수량</h2><input type="text" name="pAmount"><br>
 						<h2>상품설명</h2><input type="text" name="pDesc"><br>
-<<<<<<< HEAD
 						<input type="submit"/>
-=======
->>>>>>> f6fa83a0eea4f294321c96fd8368998a4f885e8f
+
 					</form>
 				</div>
 			</c:otherwise>
 	</c:choose>
-<<<<<<< HEAD
+
 </body>
 <script type="text/javascript">
 
 </script>
-=======
-			
-		
-		
-				
-		
-	
-		
 
 </body>
->>>>>>> f6fa83a0eea4f294321c96fd8368998a4f885e8f
+
 </html>

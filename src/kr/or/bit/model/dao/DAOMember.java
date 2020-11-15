@@ -69,6 +69,7 @@ public class DAOMember {
 			System.out.println("소금추가:"+s);
 
 			pstmt.setString(2, sha.getSha512(s+member.getPwd()));
+			
 			pstmt.setString(3, member.getName());
 			pstmt.setString(4, member.getHp());
 			pstmt.setString(5, member.getCardNum());

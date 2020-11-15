@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <style type="text/css">
 body{
-	background-image: url("../../../images/401.jpg");
+	background-image: url("https://192.168.0.30:8443/team3_ShoppingSite/images/401.png");
 }
 </style>
 <title>Error 401 Unauthorized</title>
