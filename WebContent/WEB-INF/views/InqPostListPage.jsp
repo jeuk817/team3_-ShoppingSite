@@ -20,8 +20,11 @@ Inqnum salenum inqtitle inqcontent inqcreatedat
 <td>${list2.inqnum}</td>
 <td>${list2.salenum}</td>
 <td>${list2.inqtitle}</td>
-<td>${list2.inqcontent}</td>
-<td>${list2.inqcontent}</td>
+<td>${list2.inqcreatedat}</td>
+<td><input type="button" id="edit"></td>
+<td><input type="button" id="delete"></td>
+
+
 </tr>
 </c:forEach>
 </tbody>
