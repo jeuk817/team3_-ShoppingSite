@@ -12,13 +12,13 @@
 
 <form id="info" name="info" action="memberEdit.ajax">
   <tbody>
-  <td><input type="text" id="id' name="id" read-only value='${"memberid"}'></td>
-  <td><input type="password" id="pwd" name="pwd" value='${"pwd"}'></td>
-  <td><input type="password" id="checkpwd" name="checkpwd" value="비밀번호확인입력"></td>
-  <td><input type="text" id="username" name="username" value='${"name"}'></td>
-  <td><input type="text" id="hp" name="hp" value='${"hp"}'></td>
-  <td><input type="text" id="address" name="address" value='${"address"}'></td>
-  <td><input type="text" id="cardnum" name="cardnum" value='${"card_num"}'</td>
+  <td><input type="text" id="id' name="id" read-only value='${memberid}"></td>
+  <td><input type="password" id="pwd" name="pwd" value="${member.pwd}"></td>
+  <td><input type="password" id="checkpwd" name="checkpwd" place-holder="비밀번호확인"></td>
+  <td><input type="text" id="username" name="username" value="${member.name}"></td>
+  <td><input type="text" id="hp" name="hp" value="${member.hp}"></td>
+  <td><input type="text" id="address" name="address" value="${member.address}"></td>
+  <td><input type="text" id="cardnum" name="cardnum" value="${member.card_num}"</td>
   </tbody>
   <button id="btn" name="btn">수정</button>
   <div id="message"></div>
@@ -45,7 +45,7 @@ $(document).ready(function() {
 			success: function(response) {
 				if(response == 'success') {
 					$("#message").html("<p style='color:green;font-weight:bold'>수정성공</p>");
-					$("#form1").slideUp('slow');
+					$("#info").slideUp('slow');
 				}
 				else {
 					$("#message").html("<p style='color:red'수정실패</p>");	
