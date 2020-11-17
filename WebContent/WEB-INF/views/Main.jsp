@@ -20,7 +20,7 @@
     <!-- 상품리스트 -->
 	
     <div class="item-list-container">
-    	<a href="salePage.do">
+    	<a href="/team3_ShoppingSite/salePage.do">
    		  <div class="item">
             <img src="/team3_ShoppingSite/images/19309420_1598777941_image1_M.jpg" alt="">
             <div class="store-title">

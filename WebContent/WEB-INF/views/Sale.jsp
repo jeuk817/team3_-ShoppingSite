@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,126 +18,136 @@
 </head>
 <body>
 	<jsp:include page="./common/Top.jsp"></jsp:include>
-
-    <div class="product-detail-container">
-        <div class="product-image">
-            <img src="./images/jacket.jpg" alt="">
-        </div>
-        <div class="product-info-container">
-            <div class="seller-info">
-                <div class="icon">무드글램</div>
-                <div class="seller-title"><p>크레센도</p></div>
-            </div>
-            <div class="detail-title">
-                <h1>[브랜디위크][인기재입고]비바 체크 하프자켓 코트</h1>
-            </div>
-            <div class="detail-price">
-                <h1>35,200</h1>
-            </div>
-            <div class="detail-dcprice">
-                <p>쿠폰적용가 29,200원</p>
-            </div>
-            <div class="review-info">
-                <div class="score">
-                    <p>❤❤❤❤❤</p> 
-                </div>
-                <div class="total-reviews">
-                    <a href="#"><p>406개 리뷰 보기</p></a>
-                </div>
-            </div>
-            <div class="goods-options-container">
-                <select name="colorSelect" id="">
-                    <option>컬러를 선택하세요</option>
-                    <option value="브라운">브라운</option>
-                    <option value="블랙">블랙</option>
-                </select>
-            </div>
-            <div class="price-total-container">
-                <div class="total-price-ko">
-                    <p>총상품금액</p>
-                </div>
-                <div class="total-price">
-                    <p>0원</p>
-                </div>
-            </div>
-            <div class="btn-purchase-container">
-                <ul class="btn-purchase-items">
-                    <a href="member/purchasePage.do"><li class="btn-purchase-1">
-                        <button>바로구매</button>
-                    </li></a>
-                    <a href=""><li class="btn-purchase-2">
-                        <button>NPay구매</button>
-                    </li></a>
-                    <a href=""><li class="btn-purchase-3">
-                        <i class="fas fa-shopping-cart fa-2x"></i>
-                    </li></a>
-                    <a href=""><li class="btn-purchase-4">
-                        <i class="far fa-heart fa-2x"></i>
-                    </li></a>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <div class="tab-detail-info">
-        <ul class="tab-details">
-            <li class="tab-details-item">
-                <a href="#">
-                    상품정보
-                </a>
-            </li>
-            <li class="tab-details-item">
-                 <a href="#">
-                    리뷰(423)
-                </a>
-            </li>
-            <li class="tab-details-item">
-                <a href="#">
-                    Q&A(615)
-                </a>
-            </li>
-            <li class="tab-details-item">
-                <a href="#">
-                    주문정보
-                </a>
-            </li>
-        </ul>
-    </div>
-    
-    <div class="product-description">
-        <div class="description-title">
-            <p>comment ::</p>
-        </div>
-        <div class="description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci praesentium illum aliquid neque sit omnis saepe velit dolore atque quae alias accusamus odio consequatur, inventore ratione. Rem, distinctio ratione?
-
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci praesentium illum aliquid neque sit omnis saepe velit dolore atque quae alias accusamus odio consequatur, inventore ratione. Rem, distinctio ratione?
-                
-            </p>
-        </div>
-
-        <div class="product-img">
-            <img src="../images/+detail_01 (1).jpg" alt="">
-            <img src="../images/+detail_01.jpg" alt="">
-        </div>
-    </div>
+	<c:set var="salePost" value='<%= request.getAttribute("salePost") %>'/>
+	<c:if test="${salePost != null}">
+	    <div class="product-detail-container">
+	        <div class="product-image">
+	        	<img src="/team3_ShoppingSite${ salePost.imageAddrs[0] }" alt="판매글 이미지">
+	        </div>
+	        <div class="product-info-container">
+	            <div class="seller-info">
+	                <div class="icon">무드글램</div>
+	                <div class="seller-title"><p>크레센도</p></div>
+	            </div>
+	            <div class="detail-title">
+	                <h1>${ salePost.saleTitle }</h1>
+	            </div>
+	            <div class="detail-price">
+	                <h1>35,200</h1>
+	            </div>
+	            <div class="review-info">
+	                <div class="score">
+	                    <p>❤❤❤❤❤</p> 
+	                </div>
+	                <div class="total-reviews">
+	                    <a href="#"><p>406개 리뷰 보기</p></a>
+	                </div>
+	            </div>
+	            <div class="goods-options-container">
+	                <select name="colorSelect" id="">
+	                    <option>상품을 선택하세요.</option>
+	                    <option value="S">S</option>
+	                    <option value="M">M</option>
+	                    <option value="L">L</option>
+	                    <option value="FREE">FREE</option>
+	                </select>
+	            </div>
+	            <div class="price-total-container">
+	                <div class="total-price-ko">
+	                    <p>총상품금액</p>
+	                </div>
+	                <div class="total-price">
+	                    <p>0원</p>
+	                </div>
+	            </div>
+	            
+	            <div class="btn-purchase-container">
+	                <ul class="btn-purchase-items">
+	                    <a href="member/purchasePage.do"><li class="btn-purchase-1">
+	                        <button>바로구매</button>
+	                    </li></a>
+	                    <a href="member/cart.do"><li class="btn-purchase-1">
+	                        <button>장바구니</button>
+	                    </li></a>
+	                     <a href="member/writeInquPage.do"><li class="btn-purchase-1">
+	                        <button>문의하기</button>
+	                    </li></a>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+	    
+	    <div class="tab-detail-info">
+	        <ul class="tab-details">
+	            <li class="tab-details-item">
+	                <a href="#">
+	                    상품정보
+	                </a>
+	            </li>
+	            <li class="tab-details-item">
+	                 <a href="#">
+	                    리뷰(423)
+	                </a>
+	            </li>
+	            <li class="tab-details-item">
+	                <a href="#">
+	                    Q&A(615)
+	                </a>
+	            </li>
+	            <li class="tab-details-item">
+	                <a href="#">
+	                    주문정보
+	                </a>
+	            </li>
+	        </ul>
+	    </div>
+	    
+	    <div class="product-description">
+	        <!-- <div class="description-title">
+	            <p>comment ::</p>
+	        </div>
+	        <div class="description">
+	            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci praesentium illum aliquid neque sit omnis saepe velit dolore atque quae alias accusamus odio consequatur, inventore ratione. Rem, distinctio ratione?
+	
+	            </p>
+	            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci praesentium illum aliquid neque sit omnis saepe velit dolore atque quae alias accusamus odio consequatur, inventore ratione. Rem, distinctio ratione?
+	                
+	            </p>
+	        </div> -->
+	        ${ salePost.saleContent }
+	
+	        <div class="product-img">
+		        <c:forEach var="imageAddr" items="${ salePost.imageAddrs }" varStatus="index">
+					<c:if test="${imageAddr != null}">
+						<img src="/team3_ShoppingSite${ imageAddr }" alt="상품 이미지" style="width:100%;">
+					</c:if> 
+				</c:forEach>
+	        </div>
+	    </div>
+	</c:if>
 
     <!-- review -->
-    <div class="review-container">
-
-        <div class="tab-review">
-            리뷰(8)
-        </div>
-        <div class="score-review">
-            <div class="score-letter">
-                <p>만족도</p>
-            </div>
-            <div class="score-star">
-                <p>❤❤❤❤❤ 5/5</p>
-            </div>
-        </div>
-    
+	<form>
+		<div id="review" class="review-container">
+	
+		    <div class="tab-review">
+		        리뷰
+		    </div>
+		    
+		    <div class="score-review">
+		        <div class="score-letter">
+		           <input type ="text" id ="reviewInput" >
+		           <ul class="btn-reivew-items">
+		                <!-- <a href="member/purchasePage.do"> -->
+		               <li class="btn-reivew-1">
+		                   <button id="reviewbtn" name="reviewbtn">리뷰등록</button>
+		               </li>
+		          </ul>
+		       </div>
+		   </div>
+	   </div>
+	</form>
+    <div>
         <div class="review-content-contaier">
             
             <div class="user-score-id">
@@ -212,53 +223,6 @@
         <a href="#">></a>
     </div>
 
-    <!-- Q&A -->
-
-    <div class="qna-container">
-        <div class="tab-qna">
-            <div class="tab-qna-title">
-                Q&A(7)
-            </div>
-            <div class="tab-qna-right">
-                <div class="user-write">
-                    내가 쓴 글보기
-                </div>
-                <div class="write" data-toggle="collapse" data-target="#demo">
-                <a href="member/writeInquPage.do">
-                	 <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">문의하기</button>
-                </a>
-                </div>
-               
-            </div>
-        </div>
-    </div>
-
-    <div class="collapse" id="demo">
-
-        <div class="qna-write-container">
-            <form action="#">
-                <div class="qna-write-title">
-                    <h3>제목</h3>
-                    <input type="text" name="qna-write-title">
-                </div>
-                <div class="qna-write-content">
-                    <h3>내용</h3>
-                    <textarea name="content" id="" cols="30" rows="10"></textarea>
-                </div>
-                <div class="qna-write-private">
-                    <h3>공개여부</h3>
-                    <div class="chk-private">
-                        <input type="checkbox" name="check_private">
-                        <span>비공개</span>
-                    </div>
-                </div>
-                <div class="qna-write-btn">
-                    <button type="button" id="qna-write-cancle">취소하기</button>
-                    <button type="submit" id="qna-write-submit">등록하기</button>
-                </div>
-            </form>
-        </div>
-    </div>
 
     <!-- Q&A 테이블 -->
 
@@ -272,16 +236,16 @@
                 <col style="width: 120px;">
             </colgroup>
             <thead>
-                <tr>
+                <tr class = "qna-list-topBar"> 
                     <th><h3>분류</h3></th>
                     <th><h3>처리상태</h3></th>
-                    <th><h3>내용</h3></th>
+                    <th style ="text-align: center;"><h3>내용</h3></th>
                     <th><h3>작성자</h3></th>
                     <th><h3>작성일</h3></th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr class = "qna-list-bottom">
                     <td><h3>상품문의</h3></td>
                     <td><h3>답변완료</h3></td>
                     <td class="qna-content">
@@ -336,5 +300,58 @@
     </div>
     
 </body>
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 
+<script type="text/javascript">
+	$(document).ready(function(){
+		 // 리스트 생성
+		 $("#reviewbtn").click(function(){
+			 console.log("아무거");
+			/*  var testList = new Array() ;
+	            // 객체 생성
+	            let data = new Object() ;
+	             
+	            data.sale_num = 2 ;
+	            data.id = $(memberId); //아이디
+	            data.stars = 1; //별갯수
+	           
+	            data.content = $("#reviewInput").val(); //내용
+	              */
+	             var data = {
+	            	salePostnum = 1, 
+	            	stars = 5,
+	            	content = $("#reviewInput").val()
+	            }
+	            console.log(data);
+	        // String 형태로 변환
+	        var jsonBody = JSON.stringify(data) ;
+	        alert(jsonBody) ;
+	        
+	        $.ajax({
+	            type: "POST", 
+	            url: "member/review.ajax",
+	            contentType: "appliscation/json",
+	            data: ,
+	            dataType: "json",
+	            success: function(json, status){
+	                if (status != "success") { //실패시
+	                	 console.log("Error loading datas");
+	                    return;
+	                }
+	                console.log("Data loaded!");
+	            },
+	            error: function(result, status, err) { //에러시
+	                console.log("Error loading data");
+	                return;
+	            }
+	        });
+		 })
+		 
+       
+
+
+
+	});
+	
+</script>
 </html>

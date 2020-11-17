@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-@font-face {
-    font-family: 'Wemakeprice-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 a {
   color: black;
   text-decoration: none;
@@ -75,9 +68,6 @@ select {
 .fa-shopping-cart {
   color: dodgerblue;
 }
-.btn-purchase-container {
-	padding: 0;
-}
 
 .btn-purchase-1 button {
   width: 120px;
@@ -97,6 +87,18 @@ select {
   color: white;
 }
 
+.btn-purchase-3 {
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 50px;
+  height: 40px;
+}
+
+.btn-purchase-3 i {
+  color: black;
+  margin: 0 auto;
+  line-height: 40px;
+}
 
 /* tab-info */
 
@@ -145,39 +147,19 @@ select {
   font-size: 26px;
 }
 
-.score-review input[type='text'] {
-  width: 100%;
-  height: 50px;
-  padding: 5px;
+.score-review {
+  border: 1px solid #e1e1e1;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
-  border-radius: 6px;
   margin-top: 20px;
+  border-radius: 6px;
+  height: 60px;
+  padding: 5px;
 }
-.btn-reivew-items {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 0;
-  padding: 0;
-	
-}
-.btn-reivew-1 button {
-  width: 120px;
-  height: 40px;
-  border-radius: 8px;
-  border-color : #5C73F2;
-  justify-content: flex-start;
-  background-color: #829FD9;
-  color: white;
-}
-
-
-
 
 .score-letter {
-  margin-left: 10px;
+  margin-left: 40px;
   line-height: 60px;
   margin-top: 0;
 }
@@ -199,7 +181,7 @@ select {
   margin-top: 0;
 }
 
-.review-content-contaier  {
+.review-content-contaier {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
@@ -265,10 +247,6 @@ select {
   margin-top: 30px;
 }
 
-.checkBox {
-	margin-left: 10px;
-}
-
 .qna-write-container input[type='text'] {
   width: 100%;
   height: 35px;
@@ -280,9 +258,6 @@ select {
   width: 100%;
   height: 150px;
   padding: 10px;
-}
-.qna-write-private {
-	display : flex;
 }
 
 .chk-private {
@@ -309,13 +284,8 @@ tr {
   border-bottom: 1px solid #e1e1e1;
 }
 .qna-list-container {
-	font-Family:Wemakeprice-Bold;
   width: 100%;
   table-layout: fixed;
-  margin-top: 50px;
-}
-.qna-list-topBar {
-	    text-align: left;
 }
 
 table {
@@ -342,9 +312,4 @@ table {
 
 .wrap h3 {
   line-height: 100px;
-}
-
-
-.qna-list-bottom h3{
-	    font-size: smaller;
 }

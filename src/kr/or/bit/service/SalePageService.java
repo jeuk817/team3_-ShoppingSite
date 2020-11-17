@@ -16,11 +16,11 @@ public class SalePageService implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
 		ActionForward forward = new ActionForward();
 		
-//		int saleNum = Integer.parseInt(request.getParameter("pnum"));
-//		DTOSalePost salePost = DAOSalePost.getSalePostBySaleNum(saleNum);
-		Date dateNow = new Date();
-		System.out.println(dateNow);
-		DTOSalePost salePost = new DTOSalePost(1, 1, 1, "슬랙스", "쌉니다싸요", dateNow);
+		int saleNum = Integer.parseInt(request.getParameter("saleNum"));
+		DTOSalePost salePost = DAOSalePost.getSalePostBySaleNum(saleNum);
+//		Date dateNow = new Date();
+//		System.out.println(dateNow);
+//		DTOSalePost salePost = new DTOSalePost(1, 1, 1, "슬랙스", "쌉니다싸요", dateNow);
 		request.setAttribute("salePost", salePost);
 		
 		forward.setRedirect(false);
