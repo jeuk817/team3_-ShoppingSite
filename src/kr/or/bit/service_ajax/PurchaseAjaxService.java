@@ -22,18 +22,16 @@ public class PurchaseAjaxService implements ActionAjax {
 	@Override
 	public ActionAjaxData execute(HttpServletRequest request, HttpServletResponse response) {
 		ActionAjaxData ajaxData = new ActionAjaxData();
-//		[
-//		  {
-//		    pNum:num,
-//		    pName:string,
-//		    pAmount:num,
-//		    pPrice:num,
-//		    pSize:string,
-//		    saleNum:num,
-//		    saleTitle:string,
-//		    imageAddr:string
-//		  }
-//		]
+		
+//		imageAddr: "/upload/DAAC4B5B-6D2E-4785-9827-B9ABDDF14066.jpeg"
+//		pAmount: 1
+//		pName: "초록 바지"
+//		pNum: "69"
+//		pPrice: 100000
+//		pSize: "M"
+//		saleNum: 73
+//		saleTitle: "두번째 판매글"
+		
 		JsonArray orders = (JsonArray)request.getAttribute("jsonBody");
 		Iterator<JsonElement> iter = orders.iterator();
 		
@@ -59,9 +57,16 @@ public class PurchaseAjaxService implements ActionAjax {
 					JsonObject order = iter.next().getAsJsonObject();
 					int pNum = order.get("pNum").getAsInt();
 					int pAmount = order.get("pAmount").getAsInt();
+					int pPrice = order.get("pPrice").getAsInt();
+					int saleNum = order.get("saleNum").getAsInt();
+					String pName = order.get("pName").getAsString();
+					String pSize = order.get("pSize").getAsString();
+					String saleTitle = order.get("saleTitle").getAsString();
+					String imageAddr = order.get("imageAddr").getAsString();
+					
 					int resultRow = DAOProduct.decreaseProduct(pNum, pAmount); // resultRow 어떻게 처리할것인지 생각해봐야함..
-					String id = (String)request.getSession().getAttribute("memgerId");
-					DTOPurchase purchase = new DTOPurchase(id, pNum, pAmount);
+					String id = (String)request.getSession().getAttribute("memberId");
+					DTOPurchase purchase = new DTOPurchase(id, pName, pSize, saleTitle, imageAddr, pNum, pPrice, pAmount, saleNum);
 					int resultRow2 = DAOPurchase.insertPurchase(purchase);
 				}
 				ajaxData.setData("success");

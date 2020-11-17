@@ -105,7 +105,7 @@
     </div>
     
     <div class="pay_btn">
-        <a href="">결제하기</a>
+        <a id="purchaseBtn">결제하기</a>
     </div>
 </body>
 <jsp:include page="../js/purchaseJs.jsp"></jsp:include>

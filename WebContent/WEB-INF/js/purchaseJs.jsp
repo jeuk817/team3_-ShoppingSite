@@ -10,6 +10,7 @@ let cart = null;
 
 const puchaseTable = document.getElementById('puchaseTable')
 const totalPrice = document.getElementById('totalPrice')
+const purchaseBtn = document.getElementById('purchaseBtn')
 let total = 0;
 
 function createProductEl(obj, index){
@@ -145,5 +146,37 @@ function deleteCheckedProduct(e) {
 }
 
 showInsideCart()
+
+purchaseBtn.addEventListener('click', async e => {
+  cart = JSON.parse(localStorage.getItem('cart'))
+  if(cart === null || !cart.length) return alert('구매할 상품이 없습니다.')
+  const choose = confirm('정말 구매하시겠습니까?')
+  if(!choose) return
+  const data = JSON.stringify(cart)
+  const res = await fetch('/team3_ShoppingSite/member/purchase.ajax', {
+    method:'post',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: data
+  })
+  const status = res.status
+  if(status === 200){
+    const result = await res.text()
+    if(result ==='success'){
+      alert('구매 완료')
+      cart = []
+      const cartStr = JSON.stringify(cart)
+      localStorage.setItem("cart", cartStr)
+      location.href = '/team3_ShoppingSite/member/purchasedPage.do'
+    } else {
+      alert('구매 실패. 정보를 올바르게 입력했는지 다시 확인하세요.')
+    }
+  } else if(status == 404){
+    alert('해당 요청을 찾을 수 없습니다.')
+  } else {
+    alert('서버 에러: 관리자에게 문의하십시오.')
+  }
+})
 
 </script>
