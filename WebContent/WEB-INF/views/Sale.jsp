@@ -46,18 +46,17 @@
 	                </div>
 	            </div>
 	            <div class="goods-options-container">
-	                <select name="colorSelect" id="">
-	                    <option>상품을 선택하세요.</option>
+	                <select class="productOption" name="colorSelect" id="productOption">
+	                    <option value="">상품을 선택하세요.</option>
 	                    <c:forEach var="product" items="${ productList }" varStatus="index">
 							<c:if test="${product != null}">
-								<option value="${ product.pNum }">[ ${ product.pName } ] [사이즈: ${ product.pSize } ] ${ product.pPrice }원</option>
+								<option class="productOption" value="${ product.pNum }">[ ${ product.pName } ] [사이즈: ${ product.pSize } ] / ${ product.pPrice }원</option>
 							</c:if> 
 						</c:forEach>
-	                    <!-- <option value="S">S</option>
-	                    <option value="M">M</option>
-	                    <option value="L">L</option>
-	                    <option value="FREE">FREE</option> -->
 	                </select>
+	            </div>
+	            <div id="selectedProducts">
+	            	<!-- <div>[이름이름] [사이즈] <input type="number" style="width:15%;">개 <strong>1000</strong>원</div> -->
 	            </div>
 	            <div class="price-total-container">
 	                <div class="total-price-ko">
@@ -307,6 +306,7 @@
     </div>
     
 </body>
+<jsp:include page="../js/saleJs.jsp"></jsp:include>
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 
 <script type="text/javascript">
