@@ -141,7 +141,7 @@ public class DAOMember {
 		return resultRow;
 	}
 	
-	private static DTOMember setDTOMember(ResultSet rs) throws SQLException {
+	public static DTOMember setDTOMember(ResultSet rs) throws SQLException {
 		String id = rs.getString("ID").trim();
 		String pwd = rs.getString("PWD").trim();
 		String name = rs.getString("NAME").trim();

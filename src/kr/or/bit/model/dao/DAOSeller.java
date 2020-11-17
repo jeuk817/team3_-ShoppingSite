@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import kr.or.bit.model.DBManager;
+import kr.or.bit.model.dto.DTOMember;
 import kr.or.bit.model.dto.DTOSeller;
 
 public class DAOSeller {
@@ -15,7 +16,32 @@ public class DAOSeller {
     private static final String SQL_SELECT_SELLER_BY_ID = "SELECT * FROM SELLER WHERE ID = ?";
     private static final String SQL_SELECT_SELLER_BY_SEL_NUM = "SELECT * FROM SELLER WHERE SEL_NUM = ?";
     private static final String SQL_REGIST_SELLER ="INSERT INTO SELLER (ID, SEL_EMAIL, SEL_REGIST_NUM, SEL_ACCOUNT) VALUES (?, ?, ?, ?)";
+    private static final String SQL_SELECT_MEMBER_BY_SEL_NUM = "SELECT * FROM MEMBER "
+    											+ "WHERE ID = (SELECT ID FROM SELLER WHERE SEL_NUM = ?)";
 
+    public static DTOMember ryu_getMemberBySelNum(int selNum) {
+    	DTOMember member = null;
+    	Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try {
+            conn = instance.getConnection();
+            pstmt = conn.prepareStatement(SQL_SELECT_MEMBER_BY_SEL_NUM);
+            pstmt.setInt(1, selNum);
+            rs = pstmt.executeQuery();
+
+            while(rs.next()) {
+                member = DAOMember.setDTOMember(rs);
+            }
+
+        } catch(SQLException e) {
+            e.printStackTrace();
+        } finally {
+            instance.freeConnection(conn, pstmt, rs);
+        }
+    	return member;
+    }
+    
     public static DTOSeller ryu_getSellerById(String id) {
         DTOSeller seller = null;
         Connection conn = null;
