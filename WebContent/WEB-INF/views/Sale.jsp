@@ -60,10 +60,9 @@
 	            </div>
 	            <div class="price-total-container">
 	                <div class="total-price-ko">
-	                    <p>총상품금액</p>
-	                </div>
-	                <div class="total-price">
-	                    <p>0원</p>
+	                    <p>총상품금액</p>	                </div>
+	                <div class="total-price" id="totalPriceEl">
+	                	
 	                </div>
 	            </div>
 	            
@@ -306,6 +305,20 @@
     </div>
     
 </body>
+<script>
+	const productListObj = []
+</script>
+<c:forEach var="product" items="${ productList }" varStatus="index">
+	<c:if test="${product != null}">
+		<script>
+			productListObj.push({
+				pNum: ${product.pNum} +"",
+				pPrice: ${product.pPrice},
+				amount: 0
+			})
+		</script>
+	</c:if> 
+</c:forEach>
 <jsp:include page="../js/saleJs.jsp"></jsp:include>
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 
