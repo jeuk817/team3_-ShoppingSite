@@ -17,14 +17,15 @@ public class PurchasePageService implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
 		ActionForward forward = new ActionForward();
 		
-		JsonArray products = (JsonArray)request.getAttribute("jsonBody");
+//		JsonArray products = (JsonArray)request.getAttribute("jsonBody");
 		String id = (String)request.getSession().getAttribute("memberId");
 		DTOMember member = DAOMember.getMemberById(id);
-		request.setAttribute("products", products);
+//		request.setAttribute("products", products);
 		request.setAttribute("member", member);
 		
 		forward.setRedirect(false);
-		forward.setPath("PurchasePage.jsp");
+		forward.setPath("Purchase.jsp");
+//		forward.setPath("Test.jsp");
 		
 		return forward;
 	}
