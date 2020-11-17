@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,51 +26,50 @@
                 <td></td>
                 <td><button>선택삭제</button></td>
             </tr>
-            
-            <tr>
-                <th scope="col"></th>
-                <th scope="col">판매자이름</th>
-                <th scope="col"></th>
-                <th scope="col">수량</th>
-                <th scope="col">주문금액</th>
-            </tr>
-            
             <tbody>
-            <tr>
-                <th scope="row" style="line-height: 200px";><input type="checkbox"></th>
-                <td>
-                
-                    <div class="pd_info_img" style="line-height: 200px";>
-                        <img src="/images/다운로드 (1).jpg" alt="">
-                    </div>
-                </td>
-                <td style="line-height: 200px";>제품명</td>
-                <td style="line-height: 200px";>수량</td>
-                <td style="line-height: 200px";>주문금액</td>
-            </tr>
-
-            <tr>
-                <th scope="col"></th>
-                <th scope="col">판매자이름</th>
-                <th scope="col"></th>
-                <th scope="col">수량</th>
-                <th scope="col">주문금액</th>
-            </tr>
-
-            <tr>
-                <th scope="row" style="line-height: 200px";><input type="checkbox"></th>
-                <td>
-                
-                    <div class="pd_info_img" style="line-height: 200px";>
-                        <img src="/images/다운로드 (1).jpg" alt="">
-                    </div>
-                </td>
-                <td style="line-height: 200px";>제품명</td>
-                <td style="line-height: 200px";>수량</td>
-                <td style="line-height: 200px";>주문금액</td>
-            </tr>
-         
-            </tbody>
+	            <tr>
+	                <th scope="col"></th>
+	                <th scope="col">판매자이름</th>
+	                <th scope="col"></th>
+	                <th scope="col">수량</th>
+	                <th scope="col">주문금액</th>
+	            </tr>
+	            
+	            <tr>
+	                <th scope="row" style="line-height: 200px";><input type="checkbox"></th>
+	                <td>
+	                
+	                    <div class="pd_info_img" style="line-height: 200px";>
+	                        <img src="/images/다운로드 (1).jpg" alt="">
+	                    </div>
+	                </td>
+	                <td style="line-height: 200px";>제품명</td>
+	                <td style="line-height: 200px";>수량</td>
+	                <td style="line-height: 200px";>주문금액</td>
+	            </tr>
+			</tbody>
+			<tbody>
+	            <tr>
+	                <th scope="col"></th>
+	                <th scope="col">판매자이름</th>
+	                <th scope="col"></th>
+	                <th scope="col">수량</th>
+	                <th scope="col">주문금액</th>
+	            </tr>
+	
+	            <tr>
+	                <th scope="row" style="line-height: 200px";><input type="checkbox"></th>
+	                <td>
+	                
+	                    <div class="pd_info_img" style="line-height: 200px";>
+	                        <img src="/images/다운로드 (1).jpg" alt="">
+	                    </div>
+	                </td>
+	                <td style="line-height: 200px";>제품명</td>
+	                <td style="line-height: 200px";>수량</td>
+	                <td style="line-height: 200px";>주문금액</td>
+	            </tr>
+         	</tbody>
         </table>
 
         <h3>총 결제예상 금액</h3>
