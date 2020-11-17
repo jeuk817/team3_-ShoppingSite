@@ -70,11 +70,11 @@ addCartBtn.addEventListener('click', e => {
     if(product.pAmount) selectedArr.push(product)
   });
   if(!selectedArr.length) return alert('상품을 선택하세요.')
-  let cart = JSON.parse(localStorage.getItem('selectedProducts'))
+  let cart = JSON.parse(localStorage.getItem('cart'))
   if(cart === null) cart = [];
   cart.push(...selectedArr)
   const cartStr = JSON.stringify(cart)
-  localStorage.setItem("selectedProducts", cartStr)
+  localStorage.setItem("cart", cartStr)
   const choose = confirm('장바구니에 추가했습니다. 장바구니로 이동하겠습니까?')
   if(choose) location.href = '/team3_ShoppingSite/member/cart.do'
 })
