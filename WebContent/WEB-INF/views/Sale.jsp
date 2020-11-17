@@ -14,6 +14,7 @@
 <body>
 	<jsp:include page="./common/Top.jsp"></jsp:include>
 	<c:set var="selMember" value='<%= request.getAttribute("selMember") %>'/>
+	<c:set var="seller" value='<%= request.getAttribute("seller") %>'/>
 	<c:set var="salePost" value='<%= request.getAttribute("salePost") %>'/>
 	<c:set var="productList" value='<%= request.getAttribute("productList") %>'/>
 	<c:if test="${salePost != null}">
@@ -209,7 +210,46 @@
         <a href="#">5</a>
         <a href="#">></a>
     </div>
-
+    
+    <!-- 판매자 정보 -->
+    <div id="review" class="Info-container">
+	    <div class="tab-info">
+	       	 주문정보
+	    </div>
+	      
+	   	<div class="info-content-top">
+	    	<p><h3>[스토어 정보]</h3>
+		    <div class ="info-content">
+				<p>대표자 : ${ selMember.name }</p>
+				<p>HP : ${ selMember.hp } </p>
+				<p>사업자등록번호 : ${ seller.selRegistNum }</p>
+				<p>사업장소재지 : ${ selMember.address }</p>
+			</div>
+		</div>
+        
+		<div class="info-content-top">
+			<p><h3>[스토어 고객센터]</h3>
+			<div class ="info-content">
+				<p>주중 10:00 AM ~ 10:00 PM, 주말 및 공휴일 휴무</p>
+				<p>이메일 : ${ seller.selEmail } </p>
+			</div>
+		</div>
+		<div class="tab-info">
+			 상품정보
+		</div>
+		<div class ="info-content">
+			<c:forEach var="product" items="${ productList }" varStatus="index">
+				<c:if test="${product != null}">
+					<br>
+					<div><strong>상품명: ${ product.pName }</strong></div>
+					<div>사이즈: ${ product.pSize }</div>
+					<div>가격: ${ product.pPrice }원</div>
+					<div>설명: ${ product.pDescription }</div>
+					<br>
+				</c:if> 
+			</c:forEach> 			
+		</div>			
+	</div>
 
     <!-- Q&A 테이블 -->
 

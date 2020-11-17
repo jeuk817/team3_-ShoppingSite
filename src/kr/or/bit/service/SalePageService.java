@@ -14,6 +14,7 @@ import kr.or.bit.model.dao.DAOSeller;
 import kr.or.bit.model.dto.DTOMember;
 import kr.or.bit.model.dto.DTOProduct;
 import kr.or.bit.model.dto.DTOSalePost;
+import kr.or.bit.model.dto.DTOSeller;
 
 public class SalePageService implements Action {
 
@@ -25,9 +26,11 @@ public class SalePageService implements Action {
 		DTOSalePost salePost = DAOSalePost.getSalePostBySaleNum(saleNum);
 		int selNum = salePost.getSelNum();
 		DTOMember selMember = DAOSeller.ryu_getMemberBySelNum(selNum);
+		DTOSeller seller = DAOSeller.ryu_getSellerBySelNum(selNum);
 		List<Integer> pNums = salePost.getpNums();
 		List<DTOProduct> productList = DAOProduct.getProductListByPNum(pNums);
 		request.setAttribute("selMember", selMember);
+		request.setAttribute("seller", seller);
 		request.setAttribute("salePost", salePost);
 		request.setAttribute("productList", productList);
 		
