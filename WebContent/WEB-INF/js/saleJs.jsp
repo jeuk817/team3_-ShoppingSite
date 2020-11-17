@@ -70,7 +70,8 @@ addCartBtn.addEventListener('click', e => {
     if(product.pAmount) selectedArr.push(product)
   });
   if(!selectedArr.length) return alert('상품을 선택하세요.')
-  const cart = JSON.parse(localStorage.getItem('selectedProducts'))
+  let cart = JSON.parse(localStorage.getItem('selectedProducts'))
+  if(cart === null) cart = [];
   cart.push(...selectedArr)
   const cartStr = JSON.stringify(cart)
   localStorage.setItem("selectedProducts", cartStr)

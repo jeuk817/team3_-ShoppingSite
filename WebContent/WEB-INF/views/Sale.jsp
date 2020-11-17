@@ -4,17 +4,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-   --> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/c00b702925.js" crossorigin="anonymous"></script>
-     -->  
-   <link rel="stylesheet" href="<%=request.getContextPath() %>/css/SalePage.css">
-   <jsp:include page="../js/mainJs.jsp"></jsp:include>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="/team3_ShoppingSite/css/SalePage.css">
+	<jsp:include page="../js/mainJs.jsp"></jsp:include>
 </head>
 <body>
 	<jsp:include page="./common/Top.jsp"></jsp:include>
@@ -28,7 +23,6 @@
 	        </div>
 	        <div class="product-info-container">
 	            <div class="seller-info">
-	                <!-- <div class="icon">무드글램</div> -->
 	                <div class="seller-title">판매자: ${ selMember.name }</div>
 	            </div>
 	            <div class="detail-title">
@@ -56,7 +50,6 @@
 	                </select>
 	            </div>
 	            <div id="selectedProducts">
-	            	<!-- <div>[이름이름] [사이즈] <input type="number" style="width:15%;">개 <strong>1000</strong>원</div> -->
 	            </div>
 	            <div class="price-total-container">
 	                <div class="total-price-ko">
@@ -108,19 +101,7 @@
 	    </div>
 	    
 	    <div class="product-description">
-	        <!-- <div class="description-title">
-	            <p>comment ::</p>
-	        </div>
-	        <div class="description">
-	            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci praesentium illum aliquid neque sit omnis saepe velit dolore atque quae alias accusamus odio consequatur, inventore ratione. Rem, distinctio ratione?
-	
-	            </p>
-	            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci praesentium illum aliquid neque sit omnis saepe velit dolore atque quae alias accusamus odio consequatur, inventore ratione. Rem, distinctio ratione?
-	                
-	            </p>
-	        </div> -->
 	        ${ salePost.saleContent }
-	
 	        <div class="product-img">
 		        <c:forEach var="imageAddr" items="${ salePost.imageAddrs }" varStatus="index">
 					<c:if test="${imageAddr != null}">
@@ -143,7 +124,6 @@
 		        <div class="score-letter">
 		           <input type ="text" id ="reviewInput" >
 		           <ul class="btn-reivew-items">
-		                <!-- <a href="member/purchasePage.do"> -->
 		               <li class="btn-reivew-1">
 		                   <button id="reviewbtn" name="reviewbtn">리뷰등록</button>
 		               </li>
@@ -292,7 +272,6 @@
         </table>
     </div>
 
-    
     <!-- qna paging -->
     <div class="qna-page-container">
         <a href="#"><</a>
@@ -303,10 +282,14 @@
         <a href="#">5</a>
         <a href="#">></a>
     </div>
-    
 </body>
 <script>
 	const productListObj = []
+    //pName:string,
+    //pSize:string,
+    //saleTitle:string,
+    //imageAddr:string
+    
 </script>
 <c:forEach var="product" items="${ productList }" varStatus="index">
 	<c:if test="${product != null}">
@@ -315,64 +298,14 @@
 				pNum: ${product.pNum} +"",
 				pPrice: ${product.pPrice},
 				pAmount: 0,
-			    saleNum: ${ salePost.saleNum }
+			    saleNum: ${ salePost.saleNum },
+			    pName: '<c:out value="${ product.pName }" />',
+			    pSize: '<c:out value="${ product.pSize }" />',
+			    saleTitle: '<c:out value="${ salePost.saleTitle }" />',
+			    imageAddr: '<c:out value="${ salePost.imageAddrs[0] }" />'
 			})
 		</script>
 	</c:if> 
 </c:forEach>
 <jsp:include page="../js/saleJs.jsp"></jsp:include>
-<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		 // 리스트 생성
-		 $("#reviewbtn").click(function(){
-			 console.log("아무거");
-			/*  var testList = new Array() ;
-	            // 객체 생성
-	            let data = new Object() ;
-	             
-	            data.sale_num = 2 ;
-	            data.id = $(memberId); //아이디
-	            data.stars = 1; //별갯수
-	           
-	            data.content = $("#reviewInput").val(); //내용
-	              */
-	             var data = {
-	            	salePostnum = 1, 
-	            	stars = 5,
-	            	content = $("#reviewInput").val()
-	            }
-	            console.log(data);
-	        // String 형태로 변환
-	        var jsonBody = JSON.stringify(data) ;
-	        alert(jsonBody) ;
-	        
-	        $.ajax({
-	            type: "POST", 
-	            url: "member/review.ajax",
-	            contentType: "appliscation/json",
-	            data: ,
-	            dataType: "json",
-	            success: function(json, status){
-	                if (status != "success") { //실패시
-	                	 console.log("Error loading datas");
-	                    return;
-	                }
-	                console.log("Data loaded!");
-	            },
-	            error: function(result, status, err) { //에러시
-	                console.log("Error loading data");
-	                return;
-	            }
-	        });
-		 })
-		 
-       
-
-
-
-	});
-	
-</script>
 </html>

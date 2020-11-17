@@ -17,7 +17,7 @@ public class CartPageService implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
 		ActionForward forward = new ActionForward();
-		
+//		{pNum: "27", pPrice: 70000, pAmount: 1, saleNum: 34}
 		JsonArray products = (JsonArray)request.getAttribute("jsonBody");
 		request.setAttribute("products", products);
 		
