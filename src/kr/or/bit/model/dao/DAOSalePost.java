@@ -24,6 +24,7 @@ public class DAOSalePost {
 	private static final String ryu_SQL_SELECT_LAST_ROW_FROM_SALE_POST_BY_SEL_NUM = 
 			"SELECT * FROM (SELECT * FROM SALE_POST WHERE SEL_NUM = ? ORDER BY SALE_NUM DESC) WHERE ROWNUM = 1";
 	private static final String ryu_SELECT_ALL_ORDER_BY_CREATED_AT_DESC = "SELECT * FROM SALE_POST ORDER BY SALE_CREATED_AT DESC";
+	private static final String ryu_SELECT_P_NUM_FROM_PD_SALE_POST = "SELECT P_NUM FROM PD_SALE_POST WHERE SALE_NUM = ?";
 	
 	private static String ryu_getInsertAllPdSalePostQuery(int length) {
 		String insertQuery = "INSERT INTO PD_SALE_POST(SALE_NUM, P_NUM) ";
@@ -103,6 +104,7 @@ public class DAOSalePost {
 			while(rs.next()) {
 				salePost = DAOSalePost.setDTOSalePost(rs);
 				DAOSalePost.setDTOSalePostImages(salePost, conn);
+				DAOSalePost.setDTOSalePostPNums(salePost, conn);
 			}
 		} catch(SQLException e) {
 			e.printStackTrace();
@@ -228,6 +230,27 @@ public class DAOSalePost {
 				imageAddrs.add(imageAdr);
 			}
 			salePost.setImageAddrs(imageAddrs);
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} finally {
+			instance.freeConnection(pstmt);
+			instance.freeConnection(rs);
+		}
+	}
+	
+	private static void setDTOSalePostPNums(DTOSalePost salePost, Connection conn) {
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			pstmt = conn.prepareStatement(ryu_SELECT_P_NUM_FROM_PD_SALE_POST);
+			pstmt.setInt(1, salePost.getSaleNum());
+			rs = pstmt.executeQuery();
+			List<Integer> pNums = new ArrayList<Integer>();
+			while(rs.next()) {
+				int pNum = rs.getInt("P_NUM");
+				pNums.add(pNum);
+			}
+			salePost.setpNums(pNums);
 		} catch(SQLException e) {
 			e.printStackTrace();
 		} finally {

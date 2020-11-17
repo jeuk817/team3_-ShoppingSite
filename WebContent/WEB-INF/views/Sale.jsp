@@ -18,7 +18,9 @@
 </head>
 <body>
 	<jsp:include page="./common/Top.jsp"></jsp:include>
+	<c:set var="selMember" value='<%= request.getAttribute("selMember") %>'/>
 	<c:set var="salePost" value='<%= request.getAttribute("salePost") %>'/>
+	<c:set var="productList" value='<%= request.getAttribute("productList") %>'/>
 	<c:if test="${salePost != null}">
 	    <div class="product-detail-container">
 	        <div class="product-image">
@@ -26,14 +28,14 @@
 	        </div>
 	        <div class="product-info-container">
 	            <div class="seller-info">
-	                <div class="icon">무드글램</div>
-	                <div class="seller-title"><p>크레센도</p></div>
+	                <!-- <div class="icon">무드글램</div> -->
+	                <div class="seller-title">판매자: ${ selMember.name }</div>
 	            </div>
 	            <div class="detail-title">
 	                <h1>${ salePost.saleTitle }</h1>
 	            </div>
 	            <div class="detail-price">
-	                <h1>35,200</h1>
+	                <h1>${ productList[0].pPrice }원</h1>
 	            </div>
 	            <div class="review-info">
 	                <div class="score">
@@ -46,10 +48,15 @@
 	            <div class="goods-options-container">
 	                <select name="colorSelect" id="">
 	                    <option>상품을 선택하세요.</option>
-	                    <option value="S">S</option>
+	                    <c:forEach var="product" items="${ productList }" varStatus="index">
+							<c:if test="${product != null}">
+								<option value="${ product.pNum }">[ ${ product.pName } ] [사이즈: ${ product.pSize } ] ${ product.pPrice }원</option>
+							</c:if> 
+						</c:forEach>
+	                    <!-- <option value="S">S</option>
 	                    <option value="M">M</option>
 	                    <option value="L">L</option>
-	                    <option value="FREE">FREE</option>
+	                    <option value="FREE">FREE</option> -->
 	                </select>
 	            </div>
 	            <div class="price-total-container">
