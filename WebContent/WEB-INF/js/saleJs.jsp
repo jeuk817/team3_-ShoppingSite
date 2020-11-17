@@ -19,7 +19,7 @@ for(let i = 0; i < productOption.length; i++) {
     + "</strong>원 X <input id='" + selectedProductsNum + "' type='number' value=1 onchange='changeAmount(this)' onkeypress='inNumber(event)' style='width:15%;'>개"
     + "<button value='" + selectedProductsNum + "' onclick='deleteEl(this)'>삭제</button>" + "</div>");
     for(let pd of productListObj){
-      if(pd.pNum === selectedProductsNum) pd.amount = 1;
+      if(pd.pNum === selectedProductsNum) pd.pAmount = 1;
     }
     calculateTotalPrice()
   })
@@ -29,7 +29,7 @@ function deleteEl(el){
   const index = selectedProductsArr.indexOf(el.value)
   selectedProductsArr.splice(index, 1)
   for(let pd of productListObj){
-    if(pd.pNum === el.value) pd.amount = 0;
+    if(pd.pNum === el.value) pd.pAmount = 0;
   }
   const target = el.parentNode
   target.parentNode.removeChild(target)
@@ -39,7 +39,7 @@ function deleteEl(el){
 function changeAmount(el){
   if(el.value < 0 || !el.value) el.value = 0;
   for(let pd of productListObj){
-    if(pd.pNum === el.id) pd.amount = el.value;
+    if(pd.pNum === el.id) pd.pAmount = Number(el.value);
   }
   calculateTotalPrice()
 }
@@ -47,7 +47,7 @@ function changeAmount(el){
 function calculateTotalPrice(){
   totalPrice = 0;
   for(let pd of productListObj){
-    totalPrice += pd.pPrice * pd.amount
+    totalPrice += pd.pPrice * pd.pAmount
   }
   totalPriceEl.textContent = totalPrice + "원"
 }
@@ -59,5 +59,24 @@ function inNumber(event){
 }
 
 calculateTotalPrice()
+///////////////////
+
+const addCartBtn = document.getElementById('addCartBtn')
+
+
+addCartBtn.addEventListener('click', e => {
+  const selectedArr = []
+  productListObj.forEach(product => {
+    if(product.pAmount) selectedArr.push(product)
+  });
+  if(!selectedArr.length) return alert('상품을 선택하세요.')
+  const cart = JSON.parse(localStorage.getItem('selectedProducts'))
+  cart.push(...selectedArr)
+  const cartStr = JSON.stringify(cart)
+  localStorage.setItem("selectedProducts", cartStr)
+  const choose = confirm('장바구니에 추가했습니다. 장바구니로 이동하겠습니까?')
+  if(choose) location.href = '/team3_ShoppingSite/member/cart.do'
+})
+
 
 </script>

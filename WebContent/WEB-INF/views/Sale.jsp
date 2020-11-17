@@ -68,12 +68,12 @@
 	            
 	            <div class="btn-purchase-container">
 	                <ul class="btn-purchase-items">
-	                    <a href="member/purchasePage.do"><li class="btn-purchase-1">
+	                    <li class="btn-purchase-1">
 	                        <button>바로구매</button>
-	                    </li></a>
-	                    <a href="member/cart.do"><li class="btn-purchase-1">
-	                        <button>장바구니</button>
-	                    </li></a>
+	                    </li>
+	                    <li class="btn-purchase-1">
+	                        <button id="addCartBtn">장바구니 추가</button>
+	                    </li>
 	                     <a href="member/writeInquPage.do"><li class="btn-purchase-1">
 	                        <button>문의하기</button>
 	                    </li></a>
@@ -314,7 +314,8 @@
 			productListObj.push({
 				pNum: ${product.pNum} +"",
 				pPrice: ${product.pPrice},
-				amount: 0
+				pAmount: 0,
+			    saleNum: ${ salePost.saleNum }
 			})
 		</script>
 	</c:if> 
