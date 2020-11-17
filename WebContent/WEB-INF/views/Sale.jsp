@@ -62,7 +62,9 @@
 	            <div class="btn-purchase-container">
 	                <ul class="btn-purchase-items">
 	                    <li class="btn-purchase-1">
-	                        <button>바로구매</button>
+	                        <a href="/team3_ShoppingSite/member/purchasePage.do">
+		                        <button>바로구매</button>
+	                        </a>
 	                    </li>
 	                    <li class="btn-purchase-1">
 	                        <button id="addCartBtn">장바구니 추가</button>
