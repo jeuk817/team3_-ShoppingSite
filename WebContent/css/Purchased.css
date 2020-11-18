@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.sideBar_content_container{
+   display:flex;
+}
+
+.sideBar_container{
+   flex-grow: 2;
+   
+}
+
+.purchased_container{
+   flex-grow: 8;
+   margin-left: 0;
+}
+
+
+
+.purchased_container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+tbody img {
+  width: 120px;
+  height: 120px;
+}
+
+tbody th {
+  height: 200px;
+}
+
+tbody td,
+img {
+  line-height: 200px;
+}
+
+.purchased_title {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.purchased_title h2 {
+  font-weight: bold;
+}

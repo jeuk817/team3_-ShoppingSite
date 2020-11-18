@@ -19,7 +19,7 @@
 	<div class="sidenav">
 		<a href="#about">회원정보</a><br>
 		<a href="InqPostListPage.do">문의글 관리</a><br>
-		<a href="#clients">구매내역</a><br>
+		<a href="/team3_ShoppingSite/member/purchasedPage.do">구매내역</a><br>
 		<a href="#contact">회원탈퇴</a><br>
 		<button class="dropdown-btn">판매자메뉴 
 			<i class="fa fa-caret-down"></i>
