@@ -89,12 +89,12 @@
 	            </li>
 	            <li class="tab-details-item">
 	                 <a href="#">
-	                    리뷰(423)
+	                    리뷰(${ reviewList.size() })
 	                </a>
 	            </li>
 	            <li class="tab-details-item">
 	                <a href="#">
-	                    Q&A(615)
+	                    Q&A(12)
 	                </a>
 	            </li>
 	            <li class="tab-details-item">
