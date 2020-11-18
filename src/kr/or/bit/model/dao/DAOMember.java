@@ -149,12 +149,13 @@ public class DAOMember {
 		String cardNum = "";
 		String address = "";
 		String selFlag = rs.getString("SEL_FLAG").trim();
+		String delFlag = rs.getString("DEL_FLAG").trim();
 		
 		if(rs.getString("HP") != null) hp = rs.getString("HP").trim();
 		if(rs.getString("CARD_NUM") != null) cardNum = rs.getString("CARD_NUM").trim();
 		if(rs.getString("ADDRESS") != null) address = rs.getString("ADDRESS").trim();
 		
-		DTOMember member = new DTOMember(id, pwd, name, hp, cardNum, address, selFlag);
+		DTOMember member = new DTOMember(id, pwd, name, hp, cardNum, address, selFlag, delFlag);
 		return member;
 	}
 

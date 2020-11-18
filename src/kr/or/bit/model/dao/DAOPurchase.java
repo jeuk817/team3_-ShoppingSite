@@ -15,8 +15,8 @@ public class DAOPurchase {
 	private static DBManager instance = DBManager.getInstance();
 	
 	private static final String SQL_INSERT_INTO_PURCHASE = "INSERT INTO "
-			+ "PURCHASE(ID, P_NUM, P_NAME, P_PRICE, P_SIZE, O_AMOUNT, SALE_NUM, SALE_TITLE) "
-															+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+			+ "PURCHASE(ID, P_NUM, P_NAME, P_PRICE, P_SIZE, O_AMOUNT, SALE_NUM, SALE_TITLE, IMAGE_ADDR) "
+															+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	private static final String SQL_SELECT_ALL_BY_MEMBER_ID = "SELECT * FROM PURCHASE WHERE ID = ?";
 	private static final String SQL_SELECT_PURCHASE_BY_SALE_NUM_AND_ID = "SELECT * FROM PURCHASE "
 																		+ "WHERE SALE_NUM = ? AND ID = ?";
@@ -62,6 +62,7 @@ public class DAOPurchase {
 			pstmt.setInt(6, purchase.getoAmount());
 			pstmt.setInt(7, purchase.getSaleNum());
 			pstmt.setString(8, purchase.getSaleTitle());
+			pstmt.setString(9, purchase.getImageAddr());
 			
 			resultRow = pstmt.executeUpdate();
 		} catch(SQLException e) {
@@ -97,15 +98,32 @@ public class DAOPurchase {
 		
 		return purchaseList;
 	}
+//	private int oNum;
+//	private String id;
+//	private String pName;
+//	private String pSize;
+//	private String saleTitle;
+//	private String imageAddr;
+//	private int pNum;
+//	private int pPrice;
+//	private int oAmount;
+//	private int saleNum;
+//	private Date oCreatedAt;
 	
 	private static DTOPurchase setDTOPurchase(ResultSet rs) throws SQLException {
 		int oNum = rs.getInt("O_NUM");
-		String id = rs.getString("ID").trim();
 		int pNum = rs.getInt("P_NUM");
-		int oAmount = rs.getInt("O_NUM");
+		int pPrice = rs.getInt("P_PRICE");
+		int oAmount = rs.getInt("O_AMOUNT");
+		int saleNum = rs.getInt("SALE_NUM");
+		String id = rs.getString("ID").trim();
+		String pName = rs.getString("P_NAME").trim();
+		String pSize = rs.getString("P_SIZE").trim();
+		String saleTitle = rs.getString("SALE_TITLE").trim();
+		String imageAddr = rs.getString("IMAGE_ADDR").trim();
 		Date oCreatedAt = rs.getDate("O_CREATED_AT");
 		
-		DTOPurchase purchase = new DTOPurchase(oNum, id, pNum, oAmount, oCreatedAt);
+		DTOPurchase purchase = new DTOPurchase(oNum, id, pName, pSize, saleTitle, imageAddr, pNum, pPrice, oAmount, saleNum, oCreatedAt);
 		
 		return purchase;
 	}

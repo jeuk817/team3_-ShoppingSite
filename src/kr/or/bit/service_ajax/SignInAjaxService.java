@@ -24,15 +24,13 @@ public class SignInAjaxService implements ActionAjax {
 		c_Salt salt = new c_Salt();
 		c_SHAUtil sha = new c_SHAUtil();
 		String s = salt.readSalt("key.txt");
-		System.out.println("s:"+s);
 		
 		JsonObject body = (JsonObject)request.getAttribute("jsonBody");
 		String id = body.get("id").getAsString();
 		String pwd = body.get("pwd").getAsString();
 
 		DTOMember member = DAOMember.getMemberById(id);
-		System.out.println("pwd:"+pwd);
-		if(member == null || !sha.getSha512(s+pwd).equals(member.getPwd())) {
+		if(member == null || !sha.getSha512(s+pwd).equals(member.getPwd()) || member.getDelFlag().equals("Y")) {
 			ajaxData.setData("fail");
 		} else {
 			HttpSession session = request.getSession();

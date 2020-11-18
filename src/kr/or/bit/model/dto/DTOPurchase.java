@@ -17,8 +17,22 @@ public class DTOPurchase {
 	
 	public DTOPurchase() {}
 	
-	
-	
+	public DTOPurchase(int oNum, String id, String pName, String pSize, String saleTitle, String imageAddr, int pNum,
+			int pPrice, int oAmount, int saleNum, Date oCreatedAt) {
+		super();
+		this.oNum = oNum;
+		this.id = id;
+		this.pName = pName;
+		this.pSize = pSize;
+		this.saleTitle = saleTitle;
+		this.imageAddr = imageAddr;
+		this.pNum = pNum;
+		this.pPrice = pPrice;
+		this.oAmount = oAmount;
+		this.saleNum = saleNum;
+		this.oCreatedAt = oCreatedAt;
+	}
+
 	public DTOPurchase(String id, String pName, String pSize, String saleTitle, String imageAddr, int pNum, int pPrice, int oAmount, int saleNum) {
 		this.id = id;
 		this.pName = pName;

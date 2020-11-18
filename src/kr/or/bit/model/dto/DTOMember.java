@@ -8,10 +8,11 @@ public class DTOMember {
 	private String cardNum;
 	private String address;
 	private String selFlag;
+	private String delFlag;
 
 	public DTOMember() {}
 	
-	public DTOMember(String id, String pwd, String name, String hp, String cardNum, String address, String selFlag) {
+	public DTOMember(String id, String pwd, String name, String hp, String cardNum, String address, String selFlag, String delFlag) {
 		this.id = id;
 		this.pwd = pwd;
 		this.name = name;
@@ -19,6 +20,7 @@ public class DTOMember {
 		this.cardNum = cardNum;
 		this.address = address;
 		this.selFlag = selFlag;
+		this.delFlag = delFlag;
 	}
 
 	public DTOMember(String id, String pwd, String name, String hp, String cardNum, String address) {
@@ -92,6 +94,14 @@ public class DTOMember {
 
 	public void setSelFlag(String selFlag) {
 		this.selFlag = selFlag;
+	}
+
+	public String getDelFlag() {
+		return delFlag;
+	}
+
+	public void setDelFlag(String delFlag) {
+		this.delFlag = delFlag;
 	}
 
 	@Override
