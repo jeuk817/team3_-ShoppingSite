@@ -104,7 +104,9 @@
 	    </div>
 	    
 	    <div class="product-description">
-	        ${ salePost.saleContent }
+	    	<div class="description">
+		        ${ salePost.saleContent }
+	    	</div>
 	        <div class="product-img">
 		        <c:forEach var="imageAddr" items="${ salePost.imageAddrs }" varStatus="index">
 					<c:if test="${imageAddr != null}">
@@ -115,90 +117,52 @@
 	    </div>
 	</c:if>
 
-    <!-- review -->
-	<form>
-		<div id="review" class="review-container">
-	
-		    <div class="tab-review">
-		        리뷰
+	<!-- review -->
+    <div id="reivew" class="review-container">
+        <div class="tab-review">
+            <h3 id ="reivew-img"><img src="/team3_ShoppingSite/images/리뷰아이콘.png" width="50">&nbsp;REVIEW</h3>
+        </div>
+		<div class="score-review">
+		    <div class="score-letter">
+		        <table>
+			        <tr>
+			        	<td>
+							<select id="userScore">
+		                    	<option value="5">5</option>
+		                    	<option value="4">4</option>
+		                    	<option value="3">3</option>
+		                    	<option value="2">2</option>
+		                    	<option value="1">1</option>
+		                	</select>
+			        	</td>
+			           <td><input type ="texdtarea" id ="reviewInput" placeholder ="리뷰를 등록해주세요."></td>
+			           <td><button id="reviewBtn">등록</button></td>
+			        </tr>
+		        </table>
 		    </div>
-		    
-		    <div class="score-review">
-		        <div class="score-letter">
-		           <input type ="text" id ="reviewInput" >
-		           <ul class="btn-reivew-items">
-		               <li class="btn-reivew-1">
-		                   <button id="reviewbtn" name="reviewbtn">리뷰등록</button>
-		               </li>
-		          </ul>
-		       </div>
-		   </div>
-	   </div>
-	</form>
-    <div>
-        <div class="review-content-contaier">
-            
-            <div class="user-score-id">
-                <div class="user-score">
-                    ❤❤❤❤❤
-                </div>
-                <div class="user-id">
-                    pg5425
-                </div>
-    
-            </div>
-    
-            <div class="write--time">
-                2020.11.17
-            </div>
-    
-        </div>
-        <div class="user-review">
-            <p>사진보다 예뻐용 부드럽고 좋습니다.</p>
-        </div>
-
-        <div class="review-content-contaier">
-            
-            <div class="user-score-id">
-                <div class="user-score">
-                    ❤❤❤❤❤
-                </div>
-                <div class="user-id">
-                    pg5425
-                </div>
-    
-            </div>
-    
-            <div class="write--time">
-                2020.11.17
-            </div>
-    
-        </div>
-        <div class="user-review">
-            <p>사진보다 예뻐용 부드럽고 좋습니다.</p>
-        </div>
-
-        <div class="review-content-contaier">
-            
-            <div class="user-score-id">
-                <div class="user-score">
-                    ❤❤❤❤❤
-                </div>
-                <div class="user-id">
-                    pg5425
-                </div>
-    
-            </div>
-    
-            <div class="write--time">
-                2020.11.17
-            </div>
-    
-        </div>
-        <div class="user-review">
-            <p>사진보다 예뻐용 부드럽고 좋습니다.</p>
-        </div>
+		</div>
     </div>
+
+    <div id="reivew" class="review-container">
+        <div>
+	        <div class="review-content-contaier">
+	            <div class="user-score-id">
+	                <div class="user-score">
+	                    ❤❤❤❤❤
+	                </div>
+	                <div class="user-id">
+	                    pg5425
+	                </div>
+	            </div>
+	            <div class="write--time">
+	                2020.11.17
+	            </div>
+	        </div>
+	        <div class="user-review">
+	            <p>사진보다 예뻐용 부드럽고 좋습니다.</p>
+	        </div>
+        </div>
+	</div>
 
     <!-- review paging -->
     <div class="review-page-container">
@@ -252,17 +216,12 @@
 	</div>
 
     <!-- Q&A 테이블 -->
-
     <div class="qna-list-container">
+		<div class="tab-info">
+			문의글
+        </div>
         <table class="qun-list">
-            <colgroup>
-                <col style="width: 120px;">
-                <col style="width: 90px;">
-                <col>
-                <col style="width: 120px;">
-                <col style="width: 120px;">
-            </colgroup>
-            <thead>
+              <thead>
                 <tr class = "qna-list-topBar"> 
                     <th><h3>분류</h3></th>
                     <th><h3>처리상태</h3></th>
@@ -271,41 +230,31 @@
                     <th><h3>작성일</h3></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class = "qna-list">
                 <tr class = "qna-list-bottom">
                     <td><h3>상품문의</h3></td>
                     <td><h3>답변완료</h3></td>
                     <td class="qna-content">
-                        <div class="wrap">
-                            <i class="fas fa-lock"></i>
                             <h3>비밀글입니다.</h3>
-                        </div>
                     </td>
                     <td><h3>jjj***</h3></td>
                     <td><h3>2020.09.19</h3></td>
                 </tr>
 
-                <tr>
+               <tr class = "qna-list-bottom">
                     <td><h3>상품문의</h3></td>
                     <td><h3>답변완료</h3></td>
                     <td class="qna-content">
-                        <div class="wrap">
-                            <i class="fas fa-lock"></i>
                             <h3>비밀글입니다.</h3>
-                        </div>
                     </td>
                     <td><h3>jjj***</h3></td>
                     <td><h3>2020.09.19</h3></td>
                 </tr>
-
-                <tr>
+                <tr class = "qna-list-bottom">
                     <td><h3>상품문의</h3></td>
                     <td><h3>답변완료</h3></td>
                     <td class="qna-content">
-                        <div class="wrap">
-                            <i class="fas fa-lock"></i>
                             <h3>비밀글입니다.</h3>
-                        </div>
                     </td>
                     <td><h3>jjj***</h3></td>
                     <td><h3>2020.09.19</h3></td>
@@ -314,8 +263,10 @@
         </table>
     </div>
 
+    
     <!-- qna paging -->
-    <div class="qna-page-container">
+     
+	<div class="qna-page-container">
         <a href="#"><</a>
         <a href="#">1</a>
         <a href="#">2</a>
@@ -323,15 +274,11 @@
         <a href="#">4</a>
         <a href="#">5</a>
         <a href="#">></a>
-    </div>
+	</div>
+
 </body>
 <script>
 	const productListObj = []
-    //pName:string,
-    //pSize:string,
-    //saleTitle:string,
-    //imageAddr:string
-    
 </script>
 <c:forEach var="product" items="${ productList }" varStatus="index">
 	<c:if test="${product != null}">

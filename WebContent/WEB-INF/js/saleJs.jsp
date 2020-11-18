@@ -79,5 +79,38 @@ addCartBtn.addEventListener('click', e => {
   if(choose) location.href = '/team3_ShoppingSite/member/cart.do'
 })
 
+const reviewBtn = document.getElementById('reviewBtn')
+const userScore = document.getElementById('userScore')
+const reviewInput = document.getElementById('reviewInput')
+
+reviewBtn.addEventListener('click', async e => {
+  if(!reviewInput.value) return alert('리뷰를 작성하세요')
+  const saleNum = location.href.split('=')[1]
+  const stars = userScore.options[userScore.selectedIndex].value
+  const content = reviewInput.value
+  const json = {saleNum, stars, content}
+  const data = JSON.stringify(json)
+
+  const res = await fetch('/team3_ShoppingSite/member/review.ajax', {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: data
+  })
+  const status = res.status
+  if(status === 200){
+    const result = await res.text()
+    if(result ==='success'){
+      location.reload()
+    } else {
+      alert('리뷰등록 실패. 정보를 올바르게 입력했는지 다시 확인하세요.')
+    }
+  } else if(status == 404){
+    alert('해당 요청을 찾을 수 없습니다.')
+  } else {
+    alert('서버 에러: 관리자에게 문의하십시오.')
+  }
+})
 
 </script>
