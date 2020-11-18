@@ -14,9 +14,38 @@ import kr.or.bit.model.dto.DTOPurchase;
 public class DAOPurchase {
 	private static DBManager instance = DBManager.getInstance();
 	
-	private static final String SQL_INSERT_INTO_PURCHASE = "INSERT INTO PURCHASE(ID, P_NUM, O_AMOUNT) "
-															+ "VALUES(?, ?, ?)";
+	private static final String SQL_INSERT_INTO_PURCHASE = "INSERT INTO "
+			+ "PURCHASE(ID, P_NUM, P_NAME, P_PRICE, P_SIZE, O_AMOUNT, SALE_NUM, SALE_TITLE) "
+															+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
 	private static final String SQL_SELECT_ALL_BY_MEMBER_ID = "SELECT * FROM PURCHASE WHERE ID = ?";
+	private static final String SQL_SELECT_PURCHASE_BY_SALE_NUM_AND_ID = "SELECT * FROM PURCHASE "
+																		+ "WHERE SALE_NUM = ? AND ID = ?";
+	
+	
+	public static DTOPurchase ryu_checkPurchaseBySaleNumAndId(int saleNum, String id) {
+		DTOPurchase purchase = null;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = instance.getConnection();
+			pstmt = conn.prepareStatement(SQL_SELECT_PURCHASE_BY_SALE_NUM_AND_ID);
+			pstmt.setInt(1, saleNum);
+			pstmt.setString(2, id);
+			
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				purchase = DAOPurchase.setDTOPurchase(rs);
+			}
+			
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} finally {
+			instance.freeConnection(conn, pstmt, rs);
+		}
+		
+		return purchase;
+	}
 	
 	public static int insertPurchase(DTOPurchase purchase) {
 		int resultRow = 0;
@@ -27,7 +56,12 @@ public class DAOPurchase {
 			pstmt = conn.prepareStatement(SQL_INSERT_INTO_PURCHASE);
 			pstmt.setString(1, purchase.getId());
 			pstmt.setInt(2, purchase.getpNum());
-			pstmt.setInt(3, purchase.getoAmount());
+			pstmt.setString(3, purchase.getpName());
+			pstmt.setInt(4, purchase.getpPrice());
+			pstmt.setString(5, purchase.getpSize());
+			pstmt.setInt(6, purchase.getoAmount());
+			pstmt.setInt(7, purchase.getSaleNum());
+			pstmt.setString(8, purchase.getSaleTitle());
 			
 			resultRow = pstmt.executeUpdate();
 		} catch(SQLException e) {

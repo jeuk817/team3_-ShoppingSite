@@ -5,12 +5,32 @@ import java.util.Date;
 public class DTOPurchase {
 	private int oNum;
 	private String id;
+	private String pName;
+	private String pSize;
+	private String saleTitle;
+	private String imageAddr;
 	private int pNum;
+	private int pPrice;
 	private int oAmount;
+	private int saleNum;
 	private Date oCreatedAt;
 	
 	public DTOPurchase() {}
 	
+	
+	
+	public DTOPurchase(String id, String pName, String pSize, String saleTitle, String imageAddr, int pNum, int pPrice, int oAmount, int saleNum) {
+		this.id = id;
+		this.pName = pName;
+		this.pSize = pSize;
+		this.saleTitle = saleTitle;
+		this.imageAddr = imageAddr;
+		this.pNum = pNum;
+		this.pPrice = pPrice;
+		this.oAmount = oAmount;
+		this.saleNum = saleNum;
+	}
+
 	public DTOPurchase(int oNum, String id, int pNum, int oAmount, Date oCreatedAt) {
 		this.oNum = oNum;
 		this.id = id;
@@ -63,6 +83,54 @@ public class DTOPurchase {
 
 	public void setoCreatedAt(Date oCreatedAt) {
 		this.oCreatedAt = oCreatedAt;
+	}
+
+	public String getpName() {
+		return pName;
+	}
+
+	public void setpName(String pName) {
+		this.pName = pName;
+	}
+
+	public String getpSize() {
+		return pSize;
+	}
+
+	public void setpSize(String pSize) {
+		this.pSize = pSize;
+	}
+
+	public String getSaleTitle() {
+		return saleTitle;
+	}
+
+	public void setSaleTitle(String saleTitle) {
+		this.saleTitle = saleTitle;
+	}
+
+	public String getImageAddr() {
+		return imageAddr;
+	}
+
+	public void setImageAddr(String imageAddr) {
+		this.imageAddr = imageAddr;
+	}
+
+	public int getpPrice() {
+		return pPrice;
+	}
+
+	public void setpPrice(int pPrice) {
+		this.pPrice = pPrice;
+	}
+
+	public int getSaleNum() {
+		return saleNum;
+	}
+
+	public void setSaleNum(int saleNum) {
+		this.saleNum = saleNum;
 	}
 	
 }
