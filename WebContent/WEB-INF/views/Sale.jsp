@@ -17,6 +17,7 @@
 	<c:set var="seller" value='<%= request.getAttribute("seller") %>'/>
 	<c:set var="salePost" value='<%= request.getAttribute("salePost") %>'/>
 	<c:set var="productList" value='<%= request.getAttribute("productList") %>'/>
+	<c:set var="reviewList" value='<%= request.getAttribute("reviewList") %>'/>
 	<c:if test="${salePost != null}">
 	    <div class="product-detail-container">
 	        <div class="product-image">
@@ -37,7 +38,7 @@
 	                    <p>❤❤❤❤❤</p> 
 	                </div>
 	                <div class="total-reviews">
-	                    <a href="#"><p>406개 리뷰 보기</p></a>
+	                    <a href="#review"><p>${ reviewList.size() }개 리뷰 보기</p></a>
 	                </div>
 	            </div>
 	            <div class="goods-options-container">
@@ -118,7 +119,7 @@
 	</c:if>
 
 	<!-- review -->
-    <div id="reivew" class="review-container">
+    <div id="review" class="review-container">
         <div class="tab-review">
             <h3 id ="reivew-img"><img src="/team3_ShoppingSite/images/리뷰아이콘.png" width="50">&nbsp;REVIEW</h3>
         </div>
@@ -143,8 +144,30 @@
 		</div>
     </div>
 
-    <div id="reivew" class="review-container">
-        <div>
+    <div class="review-container">
+    	<c:forEach var="review" items="${ reviewList }" varStatus="index">
+			<c:if test="${review != null}">
+				<div>
+			        <div class="review-content-contaier">
+			            <div class="user-score-id">
+			                <div class="user-score">
+			                	<c:forEach begin="1" end="${ review.revStars }" step="1">❤</c:forEach>
+			                </div>
+			                <div class="user-id">
+			                    ${ review.id }
+			                </div>
+			            </div>
+			            <div class="write--time">
+			                ${ review.revCreatedAt }
+			            </div>
+			        </div>
+			        <div class="user-review">
+			            <p>${ review.revContent }</p>
+			        </div>
+		        </div>
+			</c:if> 
+		</c:forEach>
+        <!-- <div>
 	        <div class="review-content-contaier">
 	            <div class="user-score-id">
 	                <div class="user-score">
@@ -161,7 +184,7 @@
 	        <div class="user-review">
 	            <p>사진보다 예뻐용 부드럽고 좋습니다.</p>
 	        </div>
-        </div>
+        </div> -->
 	</div>
 
     <!-- review paging -->
@@ -176,7 +199,7 @@
     </div>
     
     <!-- 판매자 정보 -->
-    <div id="review" class="Info-container">
+    <div class="Info-container">
 	    <div class="tab-info">
 	       	 주문정보
 	    </div>

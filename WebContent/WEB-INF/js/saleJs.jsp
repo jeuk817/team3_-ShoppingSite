@@ -85,7 +85,7 @@ const reviewInput = document.getElementById('reviewInput')
 
 reviewBtn.addEventListener('click', async e => {
   if(!reviewInput.value) return alert('리뷰를 작성하세요')
-  const saleNum = location.href.split('=')[1]
+  const saleNum = location.href.split('=')[1].split('#')[0]
   const stars = userScore.options[userScore.selectedIndex].value
   const content = reviewInput.value
   const json = {saleNum, stars, content}

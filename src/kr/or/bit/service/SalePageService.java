@@ -9,10 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import kr.or.bit.action.Action;
 import kr.or.bit.action.ActionForward;
 import kr.or.bit.model.dao.DAOProduct;
+import kr.or.bit.model.dao.DAOReview;
 import kr.or.bit.model.dao.DAOSalePost;
 import kr.or.bit.model.dao.DAOSeller;
 import kr.or.bit.model.dto.DTOMember;
 import kr.or.bit.model.dto.DTOProduct;
+import kr.or.bit.model.dto.DTOReview;
 import kr.or.bit.model.dto.DTOSalePost;
 import kr.or.bit.model.dto.DTOSeller;
 
@@ -29,10 +31,13 @@ public class SalePageService implements Action {
 		DTOSeller seller = DAOSeller.ryu_getSellerBySelNum(selNum);
 		List<Integer> pNums = salePost.getpNums();
 		List<DTOProduct> productList = DAOProduct.getProductListByPNum(pNums);
+		List<DTOReview> reviewList = DAOReview.ryu_getReviewListBySaleNum(saleNum);
+		
 		request.setAttribute("selMember", selMember);
 		request.setAttribute("seller", seller);
 		request.setAttribute("salePost", salePost);
 		request.setAttribute("productList", productList);
+		request.setAttribute("reviewList", reviewList);
 		
 		forward.setRedirect(false);
 		forward.setPath("Sale.jsp");
