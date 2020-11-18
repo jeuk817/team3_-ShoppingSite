@@ -1,17 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<style type="text/css">
-body{
-	background-image: url("https://192.168.0.11:8443/team3_ShoppingSite/images/403.jpg");
-}
-</style>
-<title>Error 403 Forbidden</title>
-</head>
-<body>
-
-</body>
-</html>
+<script>
+alert('권한이 없습니다.')
+location.href = '/team3_ShoppingSite/mainPage.do'
+</script>

@@ -51,6 +51,8 @@ public class DAOSalePost {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
+		PreparedStatement pstmt2 = null;
+		ResultSet rs2 = null;
 		try {
 			conn = instance.getConnection();
 			pstmt = conn.prepareStatement(ryu_SELECT_ALL_ORDER_BY_CREATED_AT_DESC);
@@ -58,6 +60,21 @@ public class DAOSalePost {
 			while(rs.next()) {
 				DTOSalePost salePost = DAOSalePost.setDTOSalePost(rs);
 				DAOSalePost.setDTOSalePostImages(salePost, conn);
+				int selNum = salePost.getSelNum();
+				pstmt2 = conn.prepareStatement("select p_num from product where sel_num = ? and rownum = 1");
+				pstmt2.setInt(1, selNum);
+				
+				rs2 = pstmt2.executeQuery();
+				rs2.next();
+				int pNum = rs2.getInt("p_num");
+				
+				pstmt2 = conn.prepareStatement("select p_price from product where p_num = ?");
+				pstmt2.setInt(1, pNum);
+				rs2 = pstmt2.executeQuery();
+				rs2.next();
+				int pPrice = rs2.getInt("p_price");
+				salePost.setSalPrice(pPrice);
+				
 				salePostList.add(salePost);
 			}
 		} catch(SQLException e) {
@@ -73,6 +90,8 @@ public class DAOSalePost {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
+		PreparedStatement pstmt2 = null;
+		ResultSet rs2 = null;
 		try {
 			conn = instance.getConnection();
 			pstmt = conn.prepareStatement(SQL_SELECT_SALEPOSTS_BY_CATEGORY);
@@ -81,6 +100,21 @@ public class DAOSalePost {
 			while(rs.next()) {
 				DTOSalePost salePost = DAOSalePost.setDTOSalePost(rs);
 				DAOSalePost.setDTOSalePostImages(salePost, conn);
+				int selNum = salePost.getSelNum();
+				pstmt2 = conn.prepareStatement("select p_num from product where sel_num = ? and rownum = 1");
+				pstmt2.setInt(1, selNum);
+				
+				rs2 = pstmt2.executeQuery();
+				rs2.next();
+				int pNum = rs2.getInt("p_num");
+				
+				pstmt2 = conn.prepareStatement("select p_price from product where p_num = ?");
+				pstmt2.setInt(1, pNum);
+				rs2 = pstmt2.executeQuery();
+				rs2.next();
+				int pPrice = rs2.getInt("p_price");
+				salePost.setSalPrice(pPrice);
+				
 				salePostList.add(salePost);
 			}
 		} catch(SQLException e) {
@@ -209,8 +243,10 @@ public class DAOSalePost {
 		int saleNum = rs.getInt("SALE_NUM");
 		int selNum = rs.getInt("SEL_NUM");
 		int categoryNum = rs.getInt("CATEGORY_NUM");
-		String saleTitle = rs.getString("SALE_TITLE").trim();
-		String saleContent = rs.getString("SALE_CONTENT").trim();
+		String saleTitle = "";
+		String saleContent = "";
+		if(rs.getString("SALE_TITLE") != null) saleTitle = rs.getString("SALE_TITLE").trim();
+		if(rs.getString("SALE_CONTENT") != null) saleContent = rs.getString("SALE_CONTENT").trim();
 		Date saleCreatedAt = rs.getDate("SALE_CREATED_AT");
 		
 		DTOSalePost salePost = new DTOSalePost(saleNum, selNum, categoryNum, saleTitle, saleContent, saleCreatedAt);

@@ -10,7 +10,7 @@
 	
 <div class="topnav-container">
     <div class="logo">
-        <a href=""><img src="/team3_ShoppingSite/images/logo@3x.png"></a>
+        <a href="/team3_ShoppingSite/mainPage.do"><img src="/team3_ShoppingSite/images/logo@3x.png"></a>
     </div>
 </div>
 
