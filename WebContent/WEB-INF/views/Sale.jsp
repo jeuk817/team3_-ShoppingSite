@@ -13,6 +13,7 @@
 </head>
 <body>
 	<jsp:include page="./common/Top.jsp"></jsp:include>
+	<c:set var="id" value='<%= (String)session.getAttribute("id") %>'/>
 	<c:set var="selMember" value='<%= request.getAttribute("selMember") %>'/>
 	<c:set var="seller" value='<%= request.getAttribute("seller") %>'/>
 	<c:set var="salePost" value='<%= request.getAttribute("salePost") %>'/>
@@ -159,6 +160,7 @@
 			            </div>
 			            <div class="write--time">
 			                ${ review.revCreatedAt }
+				            <input id="${ review.revNum }" type="button" value="삭제" onclick="deleteReview(this)">
 			            </div>
 			        </div>
 			        <div class="user-review">

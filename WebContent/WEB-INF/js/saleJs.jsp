@@ -113,4 +113,22 @@ reviewBtn.addEventListener('click', async e => {
   }
 })
 
+async function deleteReview(el){
+  const id = el.id
+  const res = await fetch('/team3_ShoppingSite/member/deleteReview.ajax?revNum=' + id)
+  const status = res.status
+  if(status === 200){
+    const result = await res.text()
+    if(result ==='success'){
+      location.reload()
+    } else {
+      alert('실패. 본인 리뷰인지 확인하시오')
+    }
+  } else if(status == 404){
+    alert('해당 요청을 찾을 수 없습니다.')
+  } else {
+    alert('서버 에러: 관리자에게 문의하십시오.')
+  }
+}
+
 </script>
