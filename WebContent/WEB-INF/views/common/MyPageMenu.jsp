@@ -17,8 +17,8 @@
   
 <!-- 사이드메뉴 -->
 	<div class="sidenav">
-		<a href="#about">회원정보</a><br>
-		<a href="InqPostListPage.do">문의글 관리</a><br>
+		<a href="/team3_ShoppingSite/member/myPage.do">회원정보</a><br>
+		<a href="/team3_ShoppingSite/member/InqPostListPage.do">문의글 관리</a><br>
 		<a href="/team3_ShoppingSite/member/purchasedPage.do">구매내역</a><br>
 		<a href="#" id="deleteMemberBtn">회원탈퇴</a><br>
 		<button class="dropdown-btn">판매자메뉴 
